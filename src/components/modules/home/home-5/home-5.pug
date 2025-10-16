@@ -1,31 +1,23 @@
-.section-tabs
-  .tabslet
-    ul.tabs-list.flex.justify-center.gap-2.mb-6
+.section-tabs.container
+  .tabslet-content(class='flex flex-col gap-2')
+    ul.tabs-list.tabslet-tab
       li
-        a(href='#tab1' class='tab-btn active') Trên Đại học
+        a(href='#tab1' class='tab-btn') Trên Đại học
       li
         a(href='#tab2' class='tab-btn') Đại học
       li
         a(href='#tab3' class='tab-btn') Cao đẳng
       li
         a(href='#tab4' class='tab-btn') Khối lớp (1–12)
-
-    //- Tab 1 content
-    #tab1.tab-content.flex.flex-wrap.gap-3.justify-center
+    #tab1.tabslet-content.tabs-list
       each name in ['Đại học Kinh Tế Quốc Dân', 'Đại học Sư Phạm Hà Nội', 'Đại học Bách Khoa Hà Nội', 'Đại học Luật Hà Nội', 'Đại học Kiến trúc Hà Nội']
         span.school-btn= name
-
-    //- Tab 2 content
-    #tab2.tab-content.flex.flex-wrap.gap-3.justify-center
+    #tab2.tabslet-content.tabs-list
       each name in ['Đại học Ngoại thương', 'Đại học Thương mại', 'Đại học Văn Lang', 'Đại học Hoa Sen']
         span.school-btn= name
-
-    //- Tab 3 content
-    #tab3.tab-content.flex.flex-wrap.gap-3.justify-center
+    #tab3.tabslet-content.tabs-list
       each name in ['Cao đẳng FPT', 'Cao đẳng Kỹ thuật Công nghệ', 'Cao đẳng Y Dược']
         span.school-btn= name
-
-    //- Tab 4 content
-    #tab4.tab-content.flex.flex-wrap.gap-3.justify-center
+    #tab4.tabslet-content.tabs-list
       each name in ['Khối 1–5', 'Khối 6–9', 'Khối 10–12']
         span.school-btn= name

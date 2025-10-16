@@ -10,27 +10,34 @@ header
 			li.wpml-ls-current-language
 				@apply hidden
 .header
-	@apply container flex justify-between py-2 items-center pr-0
+	@apply container flex justify-between py-2 items-center pr-0 relative
 	.left-header
 		@apply flex items-center gap-15 flex-1
 		.input-search
-			@apply relative flex-1 rounded-2 border border-[#DCDCDC] text-xl text-[#464646] xl:rem:mr-[100px] mr-5
+			@apply lg:block hidden relative flex-1 rounded-2 border border-[#DCDCDC] text-xl text-[#464646] xl:rem:mr-[100px] mr-5
 			.search
 				@apply pl-4 pr-10 py-3 w-full rounded-2
 			button
 				@apply absolute top-1/2 -translate-y-1/2 right-3
 	.right-header
 		@apply flex items-center gap-2
+		.pay,
+		.upload,
+		.register
+			@apply hidden lg:flex
+		.login
+			@apply flex
 		div
-			@apply p-3 flex gap-2 rounded-2 font-semibold text-base items-center
+			@apply p-3 gap-2 rounded-2 font-semibold text-base items-center
 		.pay
 			@apply bg-primary-4 uppercase
 		.upload
 			@apply bg-primary-3 uppercase
-		.login , .register
-			@apply bg-white border border-[#DCDCDC] text-[#464646] capitalize
+		.login,
+		.register
+			@apply  bg-white border border-[#DCDCDC] text-[#464646] capitalize
 .navbar-header
-	@apply relative
+	@apply relative lg:block hidden
 	ul
 		@apply container flex items-center gap-base py-5 justify-around
 		.list
@@ -38,7 +45,7 @@ header
 			&:hover
 				@apply border-primary-1 bg-blue-50
 			.mega-menu
-				@apply absolute left-0 top-full w-full bg-primary-3 -translate-y-4 opacity-0  pointer-events-none transition-all duration-300 z-10
+				@apply absolute left-0 top-full w-full bg-primary-3 -translate-y-4 opacity-0	pointer-events-none transition-all duration-300 z-10
 				.drop-down-menu
 					@apply grid grid-cols-4 gap-10 py-15 container
 					ul
@@ -47,7 +54,34 @@ header
 							@apply text-white text-lg font-semibold py-3 px-6 text-start rounded-2 w-full transition-all duration-300 ease-linear
 							&:hover
 								@apply bg-black/50
-			&.active
-				@apply border-primary-1 bg-blue-50 
+			&.mega-menu-active
+				@apply border-primary-3 bg-blue-50
 				.mega-menu
-					@apply opacity-100  pointer-events-auto translate-y-0
+					@apply opacity-100	pointer-events-auto translate-y-0
+
+.mobile-menu
+	@apply absolute bottom-0 z-10 hidden bg-primary-3 left-0 w-screen h-screen translate-y-full
+	.mobile-search
+		@apply p-4 border-b border-gray-200 relative
+		.search-input
+			@apply py-2 pl-2 pr-10 border border-gray-300 rounded-lg w-full text-[#464646]
+		button
+			@apply absolute right-7 text-primary-3 top-1/2 -translate-y-1/2
+	.mobile-nav
+		@apply flex flex-col p-4 gap-2
+		li
+			@apply border-b border-gray-200
+			&.dropdown
+				.dropdown-toggle
+					@apply flex justify-between items-center w-full text-left py-3 text-white font-medium text-lg transition
+					i
+						@apply transition-transform duration-300
+				.dropdown-menu
+					@apply hidden flex-col pl-4 pb-2
+					a
+						@apply block py-2 text-white hover:text-primary-1 transition
+			&.open
+				.dropdown-toggle i
+					@apply rotate-180
+		li a
+			@apply text-white font-medium text-lg hover:text-primary-1 transition

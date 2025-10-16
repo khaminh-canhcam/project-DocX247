@@ -1,9 +1,6 @@
+// import tabslet from ''
 export function tabsletInit() {
-  $(function () {
-    $(".tabslet").tabslet({
-      animation: true,
-      mouseevent: "click",
-      active: 1,
-    });
+  $(".tabslet-content").tabslet({
+    active: 1,
   });
 }

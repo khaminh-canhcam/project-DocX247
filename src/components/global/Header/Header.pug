@@ -3,14 +3,13 @@ header
     .left-header
       //- logo
       div
-        img(src="/img/logo.png", alt="" class='lozad')
+        img(src="/img/logo.png" alt="" class='lozad')
       //- search form
       .input-search
         input(type="text" name="" class='search' placeholder="Tìm kiếm...")
         button(type="submit") 
           <i class="fa-regular fa-magnifying-glass"></i>
-
-    //- item right pay, upload, login , register
+      //- Mobile menu overlay
     .right-header
       .pay
         //- icon
@@ -32,6 +31,42 @@ header
         <i class="fa-regular fa-right-to-bracket"></i>
         //- text
         p đăng nhập 
+      include ./HeaderHambuger
+    .mobile-menu
+      .mobile-menu-content
+        .mobile-search
+          input(type="text" placeholder="Tìm kiếm..." class="search-input")
+          button
+            i.fa-regular.fa-magnifying-glass
+        //- Menu links (có thể tái sử dụng nav hiện tại)
+        ul.mobile-nav
+          li.dropdown
+            span.dropdown-toggle
+              | Kỹ thuật – Công nghệ
+              i.fa-regular.fa-chevron-down
+            ul.dropdown-menu
+              li: a(href="#") Kiến thức nền tảng
+              li: a(href="#") Khoa học ứng dụng
+              li: a(href="#") Kỹ thuật đại cương
+          li.dropdown
+            span.dropdown-toggle
+              | Tin tức
+              i.fa-regular.fa-chevron-down
+            ul.dropdown-menu
+              li: a(href="#") Tin công nghệ
+              li: a(href="#") Kinh tế số
+          li
+            .flex.gap-5.py-3.pay
+              //- text
+              p nạp tiền  
+              //- icon
+              <i class="fa-regular fa-money-simple-from-bracket"></i>
+          li
+            .flex.gap-5.py-3.upload
+              //- text
+              p tải lên
+              //- icon
+              <i class="fa-regular fa-upload"></i>
   //- bottom nav
   nav.navbar-header
     ul
@@ -65,3 +100,4 @@ header
         //- drop down menu 
         .mega-menu
           +colMegaMenu([['something','something','something','something'],['something','something','something','something'],['something','something','something','something'],['something','something','something','something']])
+

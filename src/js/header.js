@@ -5,59 +5,84 @@ import { detectCloseElement } from "./helper";
 const vw = $(window).width();
 
 export const header = {
-	scrollActive() {
-		const height = $("header").height();
-		if ($(window).scrollTop() > height) {
-			$("header").addClass("active");
-		} else {
-			$("header").removeClass("active");
-		}
-	},
+  scrollActive() {
+    const height = $("header").height();
+    if ($(window).scrollTop() > height) {
+      $("header").addClass("header-active");
+    } else {
+      $("header").removeClass("header-active");
+    }
+  },
 
-	mobile() {
-		$(".header-hambuger").on("click", function () {
-			$(this).toggleClass("active");
-			$("body").toggleClass("isOpenMenu");
-		});
-	},
+  mobile() {
+    $(".header-hamburger").on("click", function () {
+      $(this).toggleClass("header-hamburger-active");
+      $("body").toggleClass("isOpenMenu");
+    });
+    // 🔽 Dropdown toggle (slideUp / slideDown)
+    $(document).on("click", ".dropdown-toggle", function (e) {
+      e.preventDefault();
+      const $parent = $(this).closest(".dropdown");
+      const $menu = $parent.find(".dropdown-menu");
 
-	initVariable() {
-		const height = $("header").height();
-		document.documentElement.style.setProperty("--header-height", `${height}px`);
-	},
+      if ($parent.hasClass("open")) {
+        // đóng
+        $menu.stop(true, true).slideUp(250);
+        $parent.removeClass("open");
+      } else {
+        // đóng các dropdown khác nếu muốn chỉ 1 mở
+        $parent
+          .siblings(".dropdown")
+          .removeClass("open")
+          .find(".dropdown-menu")
+          .slideUp(250);
+        // mở dropdown được click
+        $menu.stop(true, true).slideDown(250);
+        $parent.addClass("open");
+      }
+    });
+  },
 
-	init() {
-		headerSearch();
-		this.scrollActive();
-		this.mobile();
-		this.initVariable();
-		this.megaMenu(); // thêm hàm mega menu ở đây
-	},
+  initVariable() {
+    const height = $("header").height();
+    document.documentElement.style.setProperty(
+      "--header-height",
+      `${height}px`
+    );
+  },
 
-	/*==================== Mega Menu ====================*/
-	megaMenu() {
-		const lists = document.querySelectorAll(".list");
+  init() {
+    headerSearch();
+    this.scrollActive();
+    this.mobile();
+    this.initVariable();
+    this.megaMenu(); // thêm hàm mega menu ở đây
+  },
 
-		// Click vào từng list
-		lists.forEach((list) => {
-			list.addEventListener("click", (e) => {
-				e.stopPropagation(); // Ngăn sự kiện lan ra ngoài
+  /*==================== Mega Menu ====================*/
+  megaMenu() {
+    const lists = document.querySelectorAll(".list");
 
-				// Đóng tất cả menu khác
-				lists.forEach((other) => {
-					if (other !== list) other.classList.remove("active");
-				});
+    // Click vào từng list
+    lists.forEach((list) => {
+      list.addEventListener("click", (e) => {
+        e.stopPropagation(); // Ngăn sự kiện lan ra ngoài
 
-				// Toggle menu hiện tại
-				list.classList.toggle("active");
-			});
-		});
+        // Đóng tất cả menu khác
+        lists.forEach((other) => {
+          if (other !== list) other.classList.remove("mega-menu-active");
+        });
 
-		// Đóng khi click ra ngoài
-		document.addEventListener("click", () => {
-			lists.forEach((list) => list.classList.remove("active"));
-		});
-	},
+        // Toggle menu hiện tại
+        list.classList.toggle("mega-menu-active");
+      });
+    });
+
+    // Đóng khi click ra ngoài
+    document.addEventListener("click", () => {
+      lists.forEach((list) => list.classList.remove("mega-menu-active"));
+    });
+  },
 };
 
 /*==================== Events ====================*/
