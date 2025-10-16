@@ -1,0 +1,35 @@
+import Swiper from "swiper";
+import {
+  Autoplay,
+  Grid,
+  Mousewheel,
+  Navigation,
+  Pagination,
+  EffectFade
+} from "swiper/modules";
+
+/**
+ * @param swiperInit
+ */
+export function swiperInit() {
+  // section-home-banner
+  new Swiper(".section-banner", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    effect: "fade",
+    speed: 1000,
+    loop:true,
+    // autoplay:{
+    //   delay:3000
+    // },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      prevEl: ".btn-prev",
+      nextEl: ".btn-next",
+    },
+    modules: [Navigation, Pagination, EffectFade, Autoplay],
+  });
+}

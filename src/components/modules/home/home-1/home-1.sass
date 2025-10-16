@@ -1,0 +1,16 @@
+.section-banner
+  @apply relative overflow-hidden
+  .btn-slide
+    @apply absolute-center-y z-2 text-lg bg-white  text-primary-1 py-2 px-3 rounded-2 cursor-pointer
+  .btn-next
+    @apply right-[10%] translate-x-[10%]
+  .btn-prev
+    @apply left-[10%] -translate-x-[10%]
+  .swiper-pagination-bullet-active
+    @apply bg-white
+  .box-img
+    @apply overflow-hidden w-full xl:rem:h-[500px]
+    img
+      @apply w-full h-full object-cover object-center 
+.swiper
+  @apply overflow-hidden

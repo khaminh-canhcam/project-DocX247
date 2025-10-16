@@ -1,0 +1,53 @@
+header
+	@apply sticky top-0 left-0 bg-white w-full
+	@apply text-white z-10
+	.header-language
+		.header-language-active
+			@apply flex items-center
+			li:not(.wpml-ls-current-language)
+				@apply hidden
+		.header-language-list
+			li.wpml-ls-current-language
+				@apply hidden
+.header
+	@apply container flex justify-between py-2 items-center pr-0
+	.left-header
+		@apply flex items-center gap-15 flex-1
+		.input-search
+			@apply relative flex-1 rounded-2 border border-[#DCDCDC] text-xl text-[#464646] xl:rem:mr-[100px] mr-5
+			.search
+				@apply pl-4 pr-10 py-3 w-full rounded-2
+			button
+				@apply absolute top-1/2 -translate-y-1/2 right-3
+	.right-header
+		@apply flex items-center gap-2
+		div
+			@apply p-3 flex gap-2 rounded-2 font-semibold text-base items-center
+		.pay
+			@apply bg-primary-4 uppercase
+		.upload
+			@apply bg-primary-3 uppercase
+		.login , .register
+			@apply bg-white border border-[#DCDCDC] text-[#464646] capitalize
+.navbar-header
+	@apply relative
+	ul
+		@apply container flex items-center gap-base py-5 justify-around
+		.list
+			@apply cursor-pointer select-none py-3 px-4 text-[#464646] rounded-2 border border-[#DCDCDC] text-center transition-all duration-200
+			&:hover
+				@apply border-primary-1 bg-blue-50
+			.mega-menu
+				@apply absolute left-0 top-full w-full bg-primary-3 -translate-y-4 opacity-0  pointer-events-none transition-all duration-300 z-10
+				.drop-down-menu
+					@apply grid grid-cols-4 gap-10 py-15 container
+					ul
+						@apply flex flex-col gap-3 items-start px-0
+						li
+							@apply text-white text-lg font-semibold py-3 px-6 text-start rounded-2 w-full transition-all duration-300 ease-linear
+							&:hover
+								@apply bg-black/50
+			&.active
+				@apply border-primary-1 bg-blue-50 
+				.mega-menu
+					@apply opacity-100  pointer-events-auto translate-y-0

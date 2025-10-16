@@ -1,0 +1,37 @@
+@import 'src/components/_core/_mixins'
+@import 'plugins/Wordpress/form'
+
+.edit-link i:before
+	content: '✏️'
+
+@mixin list-product
+	@apply grid grid-cols-6 gap-x-3 gap-y-6 pt-10
+
+@mixin card-item
+	@apply bg-white rounded-2 p-4 flex flex-col gap-2 col-span-1
+	.image-product
+		@apply rounded-1 box-border overflow-hidden aspect-[4/5] relative
+		img
+			@apply object-cover w-full h-full object-center
+		.icon-favorite
+			@apply absolute bottom-2 right-2 py-1 px-2 rounded-1 text-white bg-black/20 text-base
+	.title-product
+		@apply text-base font-semibold line-clamp-2 leading-tight
+	.type-product
+		@apply flex justify-between items-center border-t border-gray-200 pt-2
+		img
+			@apply rounded-1 p-3
+		.view-product
+			@apply flex gap-1 items-center
+			div
+				@apply flex gap-1 text-xs items-center
+	&:hover .title-product
+		@apply text-primary-1
+
+@mixin navigation-btn
+	@apply flex gap-3 items-center text-base
+	span
+		@apply bg-primary-3 text-white rounded-2 py-2 px-3 cursor-pointer
+	.navigation-prev,
+	.navigation-next
+		@apply bg-white rounded-1 py-2 px-3 cursor-pointer

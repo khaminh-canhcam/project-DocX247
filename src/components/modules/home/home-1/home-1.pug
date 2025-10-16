@@ -1,0 +1,12 @@
+section(class='swiper section-banner')
+  .swiper-wrapper
+    - const banners = ['/img/banner.png','/img/1.jpg','/img/banner.png','/img/1.jpg']
+      each item in banners 
+        .swiper-slide
+          .box-img
+            img(src= `${item}`, alt="" class='lozad')
+  .swiper-pagination 
+  .btn-prev.btn-slide
+    <i class="fa-regular fa-chevron-left"></i>
+  .btn-next.btn-slide
+    <i class="fa-regular fa-chevron-right"></i>
