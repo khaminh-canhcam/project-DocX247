@@ -14,6 +14,23 @@ export const header = {
     }
   },
 
+  scrollUp() {
+    const $btn = $(".scroll-up");
+
+    $(window).on("scroll", function () {
+      if ($(this).scrollTop() > 200) {
+        $btn.addClass("active");
+      } else {
+        $btn.removeClass("active");
+      }
+    });
+
+    $btn.on("click", function (e) {
+      e.preventDefault();
+      $("html, body").animate({ scrollTop: 0 }, 600);
+    });
+  },
+
   mobile() {
     $(".header-hamburger").on("click", function () {
       $(this).toggleClass("header-hamburger-active");
@@ -56,7 +73,8 @@ export const header = {
     this.scrollActive();
     this.mobile();
     this.initVariable();
-    this.megaMenu(); // thêm hàm mega menu ở đây
+    this.megaMenu();
+    this.scrollUp();
   },
 
   /*==================== Mega Menu ====================*/

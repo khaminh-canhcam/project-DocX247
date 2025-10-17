@@ -1,16 +1,23 @@
-.tabs-list.tabslet-tab
-  li
-    @apply px-4 py-2 text-sm rounded-md border border-gray-200 text-gray-700 transition-all relative
-  .active
-    @apply bg-blue-600 text-white shadow-md relative
-    &::after
-      @apply absolute -bottom-5 left-1/2 -translate-x-1/2 rounded-2 rem:border-[10px] -translate-y-1
-      content: ''
-      border-color: #2563eb transparent transparent transparent
+.section-tabs 
+  @apply flex flex-col gap-8 justify-center items-center
+  h1
+    @apply text-40
+  .tabslet-tab
+    li
+      @apply px-4 py-2 md:text-base text-sm rounded-md border border-gray-200 text-gray-700 transition-all relative
+    .active
+      @apply bg-blue-600 text-white relative
+      &::after
+        @apply absolute -bottom-5 left-1/2 -translate-x-1/2 rounded-2 rem:border-[10px] -translate-y-1
+        content: ''
+        border-color: #2563eb transparent transparent transparent
+  .tabs-list
+    @apply rem:min-h-[60px]
+  .school-btn
+    @apply px-4 py-2 bg-white border border-gray-200 rounded-2 text-gray-700 
+    @apply text-center text-sm hover:bg-blue-50 hover:text-primary-1 transition-all hover:border-primary-1
+  .tabs-list
+    @apply flex gap-3 items-center justify-center
 
-.school-btn
-  @apply px-4 py-2 bg-white border border-gray-200 rounded-full text-gray-700 
-  @apply text-center text-sm hover:bg-blue-50 hover:text-blue-600 transition
-
-.tabs-list
-  @apply flex gap-3 items-center justify-center
+.tabslet-content 
+  @apply hidden    
