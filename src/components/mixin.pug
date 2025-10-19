@@ -97,7 +97,7 @@ mixin heading(title, colorClass)
 //- new item product-docx
 mixin newItemProduct(type,colorClass)
 	- const typeData = {pdf:  { icon: '/img/file-pdf.svg',  bg: 'bg-primary-2/15' },docx: { icon: '/img/file-word.svg', bg: 'bg-primary-1/15' },}[type] || { icon: '/img/file-default.svg', bg: 'bg-gray-300' };
-	a.card.group(href='' class=`${colorClass}`)
+	a.card.group(href='/' class=`${colorClass}`)
 		.type-product
 			img(src=`${typeData.icon}` alt="" class=`${typeData.bg}`)
 			.view-product
