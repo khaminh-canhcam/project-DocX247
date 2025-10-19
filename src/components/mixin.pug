@@ -97,11 +97,11 @@ mixin heading(title, colorClass)
 //- new item product-docx
 mixin newItemProduct(type,colorClass)
 	- const typeData = {pdf:  { icon: '/img/file-pdf.svg',  bg: 'bg-primary-2/15' },docx: { icon: '/img/file-word.svg', bg: 'bg-primary-1/15' },}[type] || { icon: '/img/file-default.svg', bg: 'bg-gray-300' };
-	a.card.group(href='/' class=`${colorClass}`)
+	div(class=`card group ${colorClass}`)
 		.type-product
 			img(src=`${typeData.icon}` alt="" class=`${typeData.bg}`)
 			.view-product
-				div(class='lg:block hidden') 
+				div(class='favorite cursor-pointer') 
 					<i class="fa-light fa-heart"></i>
 				div
 					<i class="fa-light fa-file"></i> 
@@ -112,7 +112,7 @@ mixin newItemProduct(type,colorClass)
 				div
 					<i class="fa-light fa-download"></i>					
 					span 500k
-		.title-product(class='group-hover:text-primary-1')
+		a.title-product(href='#', class='group-hover:text-primary-1')
 			h6 Laborum nostrud laborum ex elit esse sunt laborum ad officia reprehenderit cupidatat dolor deserunt.
 
 //- column product-docx

@@ -4,12 +4,14 @@ import { setBackgroundElement, menuSpy, stickElementToEdge } from "./helper";
 import { header } from "./header";
 import { swiperInit } from "./swiper";
 import { tabsletInit } from "./tabslet";
+import { favoriteInit } from "./favorite";
 $(document).ready(function () {
 	setBackgroundElement();
 	stickElementToEdge();
 	menuSpy();
 	header.init();
 	swiperInit();
+	favoriteInit()
 	tabsletInit();
 });
 
