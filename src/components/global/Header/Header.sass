@@ -22,13 +22,13 @@ header
 				@apply absolute top-1/2 -translate-y-1/2 right-3
 	.right-header
 		@apply flex items-center gap-3
+		a
+			@apply px-4 py-2 gap-2 rounded-2 font-normal text-base items-center
 		.pay,
 		.upload,
 		.login,
 		.register
 			@apply hidden xl:flex
-		div
-			@apply px-4 py-2 gap-2 rounded-2 font-normal text-base items-center
 		.pay
 			@apply bg-primary-4 uppercase
 		.upload
@@ -61,7 +61,7 @@ header
 				.mega-menu
 					@apply opacity-100	pointer-events-auto translate-y-0
 .mobile-menu
-	@apply absolute bottom-0 z-10 bg-primary-3 right-0 w-full
+	@apply absolute bottom-0 z-10 bg-primary-3 right-0 w-full lg:hidden block
 	@apply transition-all duration-300 ease-in translate-y-0 opacity-0 
 	.mobile-search
 		@apply p-4 border-b border-gray-200 relative
