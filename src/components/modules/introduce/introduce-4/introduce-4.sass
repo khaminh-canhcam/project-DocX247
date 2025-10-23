@@ -1,0 +1,35 @@
+.section-intro
+  @apply flex gap-4 items-stretch lg:aspect-[16/6] lg:flex-row flex-col
+  .intro-item
+    @apply flex-1 relative transition-all ease-linear cursor-pointer 
+    @apply flex flex-col items-center justify-center shadow-sm 
+    @apply ease-in-out overflow-hidden rounded-6 bg-primary-1/10 duration-500
+
+    .intro-header
+      @apply text-center transition-all
+      @apply flex flex-col items-center justify-center p-6  
+      h3 
+        @apply font-semibold text-blue-700 text-sm
+
+    .intro-body
+      @apply opacity-0 p-6 w-full hidden flex-col
+      pointer-events: none
+
+    &.active
+      @apply flex-[3] bg-white shadow-lg col-span-2 justify-start gap-10
+
+      .intro-header
+        @apply hidden
+
+      .intro-body
+        @apply opacity-100 flex
+        animation: slideInX 0.5s ease-out forwards
+        pointer-events: auto
+
+@keyframes slideInX
+  from
+    opacity: 0
+    transform: translateX(80px)
+  to
+    opacity: 1
+    transform: translateX(0)

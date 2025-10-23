@@ -5,6 +5,7 @@ import { header } from "./header";
 import { swiperInit } from "./swiper";
 import { tabsletInit } from "./tabslet";
 import { favoriteInit } from "./favorite";
+import { featureSection } from "./feature-openItem";
 $(document).ready(function () {
 	setBackgroundElement();
 	stickElementToEdge();
@@ -13,6 +14,7 @@ $(document).ready(function () {
 	swiperInit();
 	favoriteInit()
 	tabsletInit();
+	featureSection();
 });
 
 /*==================== Aos Init ====================*/

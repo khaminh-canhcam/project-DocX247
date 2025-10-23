@@ -3,7 +3,6 @@
 
 
 html
-	overflow: auto
 	scroll-behavior: smooth
 
 .edit-link i:before
@@ -40,3 +39,12 @@ html
 	.navigation-prev,
 	.navigation-next
 		@apply bg-white rounded-1 py-2 px-3 cursor-pointer
+
+@mixin item-introduce
+	@apply lg:p-9 p-6 rounded-6 flex flex-col gap-10 text-white md:col-span-1 col-span-full
+	.header-title-introduce
+		@apply flex flex-col gap-3 text-lg
+		i
+			@apply text-32
+	.decs
+		@apply text-lg

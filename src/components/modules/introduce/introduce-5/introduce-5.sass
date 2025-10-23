@@ -1,0 +1,13 @@
+.policy-item
+  @apply border-t-primary-1 isolate overflow-hidden rounded-full relative 
+  border: 4px solid 
+  border-color: bg-primary-1 5%
+  /* viền mờ nhạt ngoài */
+  &::before
+    content: ""
+    @apply absolute inset-0 border-[6px] border-slate-500/20 z-0 rounded-full shadow-lg
+
+  /* viền xanh đậm chạy quanh */
+  &::after
+    content: ""
+    @apply absolute inset-0 rounded-full border border-primary-1 z-1 shadow-xl

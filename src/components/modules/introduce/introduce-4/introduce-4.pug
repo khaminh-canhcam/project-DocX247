@@ -1,0 +1,17 @@
+section.section-py.container
+  .section-intro
+    each item, i in [{ title: 'Kho tài liệu đa dạng – chất lượng', img: '/img/1.jpg', desc: 'Học tập, nghiên cứu, kỹ năng mềm...' },{ title: 'Mô hình giao dịch linh hoạt', img: '/img/1.jpg', desc: 'Minh bạch, tiện lợi, bảo mật...' },{ title: 'Nền tảng đáng tin cậy', img: '/img/1.jpg', desc: 'Được hàng triệu người tin dùng...' },{ title: 'Trải nghiệm mượt mà', img: '/img/1.jpg', desc: 'Giao diện thân thiện, tốc độ nhanh...' },{ title: 'An toàn & bảo mật', img: '/img/1.jpg', desc: 'Dữ liệu người dùng được bảo vệ...' }]
+      .intro-item(class=i === 0 ? 'active' : '',data-index=i)
+        // phần icon + title (hiển thị khi chưa active)
+        .intro-header
+          i(class="text-blue-600 text-4xl mb-3 fa-solid fa-layer-group")
+          h3= item.title
+        // phần hình + mô tả (chỉ hiện khi active)
+        .intro-body
+          div(class='img-ratio ratio:pt-[320_630] rounded-6')
+            img(src=item.img alt=item.title class="lozad object-cover")
+          .p-6.text-left
+            h4.font-semibold.text-blue-800.mb-2.flex.items-center.gap-2
+              i(class="fa-solid fa-layer-group text-blue-600 text-xl")
+              span= item.title
+            p.text-gray-600.text-sm= item.desc

@@ -1,0 +1,9 @@
+section.section-py.flex.flex-col.gap-10.container.mx-auto
+  .title-content
+    h1 Về DocX247
+    p Laboris aliqua sit reprehenderit duis dolore sunt ea cupidatat minim in cupidatat pariatur sit. Sunt excepteur excepteur dolor esse ullamco sunt mollit est officia pariatur esse irure. Lorem sunt est do aute aliqua tempor occaecat.
+      | Culpa commodo nulla ea nulla sunt occaecat consectetur ad minim. Ut eu ad anim laboris velit sint quis consequat consequat deserunt velit. Id consectetur deserunt sint dolore reprehenderit nostrud sunt aliquip id quis voluptate cupidatat nostrud adipisicing. Commodo eiusmod aliqua mollit ad irure. Dolore ad aliqua consectetur tempor.
+      | Quis proident et et duis laborum ex dolore. Ullamco sint tempor ex culpa ipsum. Reprehenderit officia proident deserunt exercitation labore ipsum consectetur qui nisi incididunt magna. Cupidatat elit pariatur sit elit consectetur do excepteur dolor dolore aliquip magna aliqua. Ad dolor aliquip voluptate non ullamco est anim.
+  .row-item
+    each item in [{icon:'print',title:'Cillum laborum anim sint in.',desc:'Nisi consectetur excepteur fugiat mollit ex proident esse magna ut minim veniam deserunt.'},{icon:'brain',title:'Cillum laborum anim sint in.',desc:'Nisi consectetur excepteur fugiat mollit ex proident esse magna ut minim veniam deserunt.'},{icon:'book',title:'Cillum laborum anim sint in.',desc:'Nisi consectetur excepteur fugiat mollit ex proident esse magna ut minim veniam deserunt.'}] 
+      +itemIntroduce(item.icon, item.title, item.desc)

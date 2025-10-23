@@ -64,13 +64,13 @@ header
 	@apply absolute bottom-0 z-10 bg-primary-3 right-0 w-full lg:hidden block
 	@apply transition-all duration-300 ease-in translate-y-0 opacity-0 
 	.mobile-search
-		@apply p-4 border-b border-gray-200 relative
+		@apply p-4 border-b border-gray-200 relative hidden
 		.search-input
 			@apply py-2 pl-2 pr-10 border border-gray-300 rounded-lg w-full text-[#464646]
 		button
 			@apply absolute right-7 text-primary-3 top-1/2 -translate-y-1/2
 	.mobile-nav
-		@apply flex flex-col p-4 gap-2
+		@apply hidden flex-col p-4 gap-2
 		li:not(:last-child)
 			@apply border-b border-gray-200
 			&.dropdown

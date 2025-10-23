@@ -1,8 +1,8 @@
 {
 	"connection": {
 		"host": "185.250.38.17",
-		"user": "previewcanhcam_itmj",
-		"password": "FD8G!qzchG4Catye",
+		"user": "previewcanhcam_intern-1",
+		"password": "^HczCht#1CJvx8yr",
 		"parallel": 10,
 		"secure": false,
 		"secureOptions": null,
@@ -11,7 +11,7 @@
 		"keepalive": 10000
 	},
 	"deployment": {
-		"basePath": "/public_html/wp-content/themes/canhcamtheme",
+		"basePath": "/public_html/docx247",
 		"localFolder": "dist",
 		"mappings": {
 			"styles": {
