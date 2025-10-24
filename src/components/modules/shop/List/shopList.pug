@@ -1,0 +1,32 @@
+section(class='bg-primary-1/10')
+  .container
+    div(class='text-gray-400 text-base flex items-center gap-3 py-3')
+      <i class="fa-solid fa-house"></i> | something | something
+    .box-header-title
+      h1 Eiusmod dolore laboris fugiat ex duis.
+    div(class='section-py flex flex-col gap-10')
+      .filter-product
+        -for(let i = 1 ; i < 4; i++)
+          .filter
+            .filter-select
+              h6.filter-label Tổng hợp
+              button.filter-toggle
+                span.font-bold Tất cả
+                svg.w-4.h-4.ml-2(fill="none" stroke="currentColor" viewBox="0 0 24 24")
+                  path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7")
+              ul.filter-options.hidden
+                li.active Tất cả
+                li Mới đăng
+                li Tải nhiều
+                li Xem nhiều
+                li Đang hot
+                li Xu hướng
+      .list-product.py-0
+        each item in ['pdf','docx','pdf','docx','pdf','docx','pdf','docx','pdf','docx','pdf','docx','pdf','docx','pdf','docx','pdf','docx','pdf','docx','pdf','docx','pdf','docx']
+          +itemProductDocx(item)
+      .navigation-docx
+            .navigation-prev
+              <i class="fa-regular fa-chevron-left"></i>
+            span 1
+            .navigation-next
+              <i class="fa-regular fa-chevron-right"></i>

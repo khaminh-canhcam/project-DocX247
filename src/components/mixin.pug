@@ -118,7 +118,7 @@ mixin newItemProduct(type,colorClass)
 //- column product-docx
 mixin column(title, colorClass, colorCard)
 	- const files = ['docx','pdf','docx','pdf','pdf']
-	.card-new-item
+	.card-new-item.swiper-slide
 		+heading(title, colorClass)
 		each f in files
 			+newItemProduct(f, colorCard)

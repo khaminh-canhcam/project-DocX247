@@ -1,6 +1,6 @@
 // import tabslet from ''
 export function tabsletInit() {
-  $(".tabslet-content").tabslet({
+  $(".tabs").tabslet({
     active: 1,
   });
 }

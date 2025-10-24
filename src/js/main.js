@@ -5,16 +5,16 @@ import { header } from "./header";
 import { swiperInit } from "./swiper";
 import { tabsletInit } from "./tabslet";
 import { favoriteInit } from "./favorite";
-import { featureSection } from "./feature-openItem";
+import { feature } from "./feature-openItem";
 $(document).ready(function () {
 	setBackgroundElement();
 	stickElementToEdge();
 	menuSpy();
 	header.init();
+	feature.init();
 	swiperInit();
 	favoriteInit()
 	tabsletInit();
-	featureSection();
 });
 
 /*==================== Aos Init ====================*/

@@ -80,12 +80,10 @@ export const header = {
   /*==================== Mega Menu ====================*/
   megaMenu() {
     const lists = document.querySelectorAll(".list");
-
     // Click vào từng list
     lists.forEach((list) => {
       list.addEventListener("click", (e) => {
         e.stopPropagation(); // Ngăn sự kiện lan ra ngoài
-
         // Đóng tất cả menu khác
         lists.forEach((other) => {
           if (other !== list) other.classList.remove("mega-menu-active");

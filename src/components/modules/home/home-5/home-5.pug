@@ -1,7 +1,7 @@
 section(class='bg-[#0249D70D] section-py')
   .section-tabs.container
     h1 Tổng hợp học liệu chọn lọc
-    .tabslet-content(class='flex flex-col gap-2')
+    .tabs(class='flex flex-col gap-2')
       ul.tabs-list.tabslet-tab
         li
           a(href='#tab1' class='tab-btn') Trên Đại học
@@ -11,18 +11,18 @@ section(class='bg-[#0249D70D] section-py')
           a(href='#tab3' class='tab-btn') Cao đẳng
         li
           a(href='#tab4' class='tab-btn') Khối lớp (1–12)
-      #tab1.tabslet-content.tabs-list
+      #tab1.tabslet-content
         each name in ['Đại học Kinh Tế Quốc Dân', 'Đại học Sư Phạm Hà Nội', 'Đại học Bách Khoa Hà Nội', 'Đại học Luật Hà Nội', 'Đại học Kiến trúc Hà Nội']
           span.school-btn= name
-      #tab2.tabslet-content.tabs-list
+      #tab2.tabslet-content
         each name in ['Đại học Ngoại thương', 'Đại học Thương mại', 'Đại học Văn Lang', 'Đại học Hoa Sen']
           span.school-btn= name
-      #tab3.tabslet-content.tabs-list
+      #tab3.tabslet-content
         each name in ['Cao đẳng FPT', 'Cao đẳng Kỹ thuật Công nghệ', 'Cao đẳng Y Dược']
           span.school-btn= name
-      #tab4.tabslet-content.tabs-list
+      #tab4.tabslet-content
         each name in ['Khối 1–5', 'Khối 6–9', 'Khối 10–12']
           span.school-btn= name
-    a(href="/" class='text-center flex justify-center items-center text-lg text-primary-1 gap-2 ') 
+    a(href="/" class='text-center flex justify-center items-center text-lg text-primary-1 gap-2 hover:text-primary-2 ') 
       | Xem tất cả Đại Học 
       <i class="fa-solid fa-arrow-right"></i>

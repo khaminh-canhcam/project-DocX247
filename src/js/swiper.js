@@ -32,4 +32,19 @@ export function swiperInit() {
     },
     modules: [Navigation, Pagination, EffectFade, Autoplay],
   });
+
+  new Swiper('.swiper-col',{
+    slidesPerView: 2,
+    spaceBetween: 24,
+    breakpoints: {
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 24,
+      },
+      1200: {
+        slidesPerView: 6,
+        spaceBetween: 12,
+      },
+    },
+  })
 }
