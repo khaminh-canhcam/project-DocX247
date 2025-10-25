@@ -1,0 +1,20 @@
+section.container
+  div(class='text-gray-400 text-base flex items-center gap-2 py-3 divide-x-2 divide-gray-400 col-span-full ')
+      a(href="") <i class="fa-solid fa-house"></i>
+      a(href="" class='pl-2') something 
+      a(href="" class='pl-2') something
+  .grid.grid-cols-3.gap-base
+    div.col-span-2
+      h1 something
+    aside(class=' flex flex-col gap-9')
+      div(class='img-ratio ratio:pt-[200_440]')
+        +PugImg()
+      div(class='bg-[#0249D7] bg-opacity-[5%] flex flex-col gap-4 ')
+        h1 Dolore adipisicing enim aliquip dolore commodo.
+        .input-search
+          input(type="text" name="" class='search' placeholder="Tìm kiếm tai lieu...")
+          button(type="submit") 
+            <i class="fa-light fa-magnifying-glass"></i>
+        div(class='flex flex-col gap-3 p-3')
+          each item in  ['docx','pdf','docx','pdf','pdf']
+            +newItemProduct(item)

@@ -11,7 +11,7 @@
 		"keepalive": 10000
 	},
 	"deployment": {
-		"basePath": "/public_html/docx247",
+		"basePath": "/public_html/",
 		"localFolder": "dist",
 		"mappings": {
 			"styles": {

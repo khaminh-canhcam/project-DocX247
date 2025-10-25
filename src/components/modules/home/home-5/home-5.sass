@@ -1,10 +1,10 @@
 .section-tabs
   @apply flex flex-col gap-8 justify-center items-center
   h1
-    @apply text-40
+    @apply text-32 mt-3
   .tabslet-tab
     li
-      @apply lg:px-4 lg:py-2 p-2 md:text-base text-sm rounded-md border border-gray-200 text-gray-700 transition-all relative
+      @apply lg:px-4 lg:py-2 p-2 bg-white text-base rounded-md border border-gray-200 text-gray-700 transition-all relative
     .active
       @apply bg-blue-600 text-white relative
       &::after
@@ -15,7 +15,7 @@
     @apply flex gap-3 items-center flex-wrap justify-center
     @apply rem:min-h-[60px]
   .school-btn
-    @apply px-4 py-2 bg-white border border-gray-200 rounded-2 text-gray-700
-    @apply text-center text-sm hover:bg-blue-50 hover:text-primary-1 transition-all hover:border-primary-1
+    @apply px-4 py-2 bg-white border border-gray-200 rounded-2 text-gray-700 md:basis-auto basis-[48%]
+    @apply text-center text-base hover:bg-blue-50 hover:text-primary-1 transition-all hover:border-primary-1
 .tabslet-content
-  @apply basis-[25%] justify-start flex gap-3 flex-wrap
+  @apply md:justify-center justify-start flex gap-3 flex-wrap

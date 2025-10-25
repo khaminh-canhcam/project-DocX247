@@ -5,6 +5,7 @@
 html
 	scroll-behavior: smooth
 
+
 .edit-link i:before
 	content: '✏️'
 
@@ -12,7 +13,7 @@ html
 	@apply grid grid-cols-6 gap-x-3 gap-y-6 pt-10
 
 @mixin card-item
-	@apply bg-white rounded-2 lg:p-3 p-2 flex flex-col gap-2 xl:col-span-1 md:col-span-2	col-span-3
+	@apply bg-white rounded-2 lg:p-4 p-3 flex flex-col gap-2 xl:col-span-1 md:col-span-2	col-span-3
 	.image-product
 		@apply img-ratio ratio:pt-[255_200] rounded-2
 		.icon-favorite
@@ -21,12 +22,12 @@ html
 		h6
 			@apply lg:text-base text-sm xl:font-semibold line-clamp-2 leading-tight
 	.type-product
-		@apply flex items-center lg:gap-3 gap-2 justify-between
-		@apply border-t border-gray-200 pt-2 flex-wrap
+		@apply flex items-center lg:gap-3 gap-10 justify-between
+		@apply border-t border-gray-200 pt-2
 		img
 			@apply rounded-1 p-3
 		.view-product
-			@apply flex gap-1 items-center flex-wrap
+			@apply flex gap-1 items-center flex-wrap text-gray-500
 			div
 				@apply flex gap-1 text-xs items-center
 	&:hover .title-product
@@ -35,13 +36,13 @@ html
 @mixin navigation-btn
 	@apply flex gap-3 items-center text-base
 	span
-		@apply bg-primary-3 text-white rounded-2 py-2 px-3 cursor-pointer
+		@apply bg-primary-3 text-white rounded-1 py-3 px-5 cursor-pointer
 	.navigation-prev,
 	.navigation-next
-		@apply bg-white rounded-1 py-2 px-3 cursor-pointer
+		@apply bg-white rounded-1 py-3 px-4 cursor-pointer
 
 @mixin item-introduce
-	@apply lg:p-9 p-6 rounded-6 flex flex-col gap-10 text-white md:col-span-1 col-span-full
+	@apply lg:p-9 p-6 rounded-6 flex flex-col gap-base text-white md:col-span-1 col-span-full
 	.header-title-introduce
 		@apply flex flex-col gap-3 text-lg
 		i

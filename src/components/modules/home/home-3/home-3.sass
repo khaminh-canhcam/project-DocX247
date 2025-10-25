@@ -1,5 +1,5 @@
 .card-heading
-  @apply text-lg text-white  text-center
+  @apply lg:text-lg text-15px text-white  text-center
   @apply p-3 font-semibold rounded-2
 .heading-blue
   @apply bg-primary-1
@@ -7,8 +7,6 @@
   @apply bg-primary-2
 .heading-green
   @apply bg-primary-3
-.card
-  @apply border-3 rounded-3
 .card-blue
   @apply border-primary-1
 .card-orange
@@ -21,7 +19,7 @@
   @apply xl:col-span-1 md:col-span-2 col-span-3 flex flex-col gap-1
   .card
     @include card-item
-    @apply gap-6
+    @apply gap-6 border rounded-3
 
 .favorite.active-favorite i
   color: #e11d48

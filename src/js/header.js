@@ -27,7 +27,7 @@ export const header = {
 
     $btn.on("click", function (e) {
       e.preventDefault();
-      $("html, body").animate({ scrollTop: 0 }, 600);
+      $("html, body").animate({ scrollTop: 0 }, 100);
     });
   },
 

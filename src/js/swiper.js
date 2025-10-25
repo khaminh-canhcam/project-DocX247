@@ -35,11 +35,11 @@ export function swiperInit() {
 
   new Swiper('.swiper-col',{
     slidesPerView: 2,
-    spaceBetween: 24,
+    spaceBetween: 8,
     breakpoints: {
       768: {
         slidesPerView: 4,
-        spaceBetween: 24,
+        spaceBetween: 8,
       },
       1200: {
         slidesPerView: 6,

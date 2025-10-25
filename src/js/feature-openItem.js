@@ -15,14 +15,17 @@ export const feature = {
       const toggle = select.querySelector(".filter-select");
       const options = select.querySelector(".filter-options");
       const selected = toggle.querySelector("span");
+
       // Click toggle → mở / đóng menu
       toggle.addEventListener("click", (e) => {
         e.stopPropagation();
         options.classList.toggle("hidden");
       });
+
       // Click chọn option
       options.querySelectorAll("li").forEach((li) => {
-        li.addEventListener("click", () => {
+        li.addEventListener("click", (e) => {
+          e.stopPropagation(); // 🟢 ngăn lan truyền
           // Xóa active cũ
           options
             .querySelectorAll("li")
@@ -35,6 +38,7 @@ export const feature = {
           options.classList.add("hidden");
         });
       });
+
       // Click ngoài → đóng dropdown
       document.addEventListener("click", (e) => {
         if (!e.target.closest(".filter-select")) {
