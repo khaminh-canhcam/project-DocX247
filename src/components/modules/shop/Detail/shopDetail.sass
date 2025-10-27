@@ -9,4 +9,50 @@
 .card
   @include card-item
   .type-product
-    @apply border-0 
+    @apply border-0
+.view-product
+  @apply flex gap-4 items-center flex-wrap text-gray-500
+  div
+    @apply flex gap-1 text-base items-center
+
+.section-document
+  @apply flex flex-col gap-base
+  .section-title
+    @apply container text-32 font-semibold text-gray-800
+  .document-info
+    @apply bg-[#0249D70D] shadow-sm xl:mx-[160px] mx-0 xl:py-15 py-4 rounded-6
+
+    .title
+      @apply font-semibold text-gray-700 
+
+    .info-table
+      @apply w-full border-collapse flex md:gap-base gap-0 md:flex-row flex-col
+
+      tbody
+        @apply basis-1/2
+
+      td
+        @apply border border-gray-200 px-4 py-2 text-sm text-gray-700
+
+      .label
+        @apply font-medium bg-gray-50 w-1/4
+
+      .value
+        @apply w-1/4
+
+      .icon
+        @apply w-5 h-5 inline-block
+
+  .document-content
+    @apply bg-[#0249D70D] shadow-sm  xl:mx-[160px] mx-0 xl:py-15 py-4 rounded-6
+
+    .title
+      @apply font-semibold text-gray-700 text-24
+
+    .content-box
+      @apply bg-white rounded-xl shadow-inner text-gray-700 leading-relaxed text-sm lg:p-base p-5 
+      p
+        @apply overflow-y-scroll rem:h-[470px] 
+
+    .date
+      @apply text-sm text-gray-500 text-start

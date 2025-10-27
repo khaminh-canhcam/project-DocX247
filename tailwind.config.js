@@ -126,6 +126,7 @@ module.exports = {
       "7xl": ["calc(72/1920*100rem)", { lineHeight: "1" }],
       "8xl": ["calc(84/1920*100rem)", { lineHeight: "1" }],
       "9xl": ["calc(96/1920*100rem)", { lineHeight: "1" }],
+      24: ["calc(24/1920*100rem)",{lineHeight:1.5}],
       28: ["calc(28/1920*100rem)", { lineHeight: 1.5 }],
       30: ["calc(30/1920*100rem)", { lineHeight: "calc(38/1920*100rem)" }],
       38: ["calc(38/1920*100rem)", { lineHeight: "calc(46/1920*100rem)" }],
@@ -135,6 +136,7 @@ module.exports = {
       64: ["calc(64/1920*100rem)"],
     },
     spacing: {
+      base:"calc(40/1920*100rem) /*40px*/",
       0: "0px",
       0.25: "calc(1/1920*100rem) /* 1px */",
       0.5: "calc(2/1920*100rem) /* 2px */",
