@@ -133,11 +133,8 @@ header
 
     button.popup-topup-close(type="button") ×
 
-    // LEFT
     .popup-topup-left
       h2.popup-topup-title Nạp tiền
-
-      // Gói nạp
       .popup-topup-package
         label.popup-topup-label Chọn gói nạp
         .popup-topup-package-list
@@ -149,7 +146,6 @@ header
         label.popup-topup-label.mt-4 Nhập số tiền khác
         input.popup-topup-package-input(type="text" placeholder="Ví dụ: 150,000 VNĐ")
 
-      // Phương thức thanh toán
       .popup-topup-payment
         label.popup-topup-label Chọn phương thức thanh toán
         .popup-topup-payment-list
@@ -164,7 +160,6 @@ header
               img.popup-topup-payment-icon(src="/img/vnpay.png" alt="vnpay")
               span.popup-topup-payment-name Thanh toán qua VNPAY
 
-    // RIGHT
     .popup-topup-right
       .popup-topup-info
         h3.popup-topup-subtitle Thông tin thanh toán
@@ -177,4 +172,4 @@ header
             span 100,000 VNĐ
       .popup-topup-actions
         p.popup-topup-note * Số tiền nạp tối thiểu là 10,000 VNĐ
-        a(href='/finishpay.html').popup-topup-btn Thanh toán
+        button(type="button").popup-topup-btn Thanh toán

@@ -70,7 +70,7 @@ mixin colMegaMenu(group)
 //- item product-docx
 mixin itemProductDocx(type)
 	- const typeData = {pdf:  { icon: '/img/file-pdf.svg',  bg: 'bg-primary-2/15' },docx: { icon: '/img/file-word.svg', bg: 'bg-primary-1/15' },}[type] || { icon: '/img/file-default.svg', bg: 'bg-gray-300' };
-	a.item-product(href="#" class='group')
+	a.item-product(href="/shopDetail.html" class='group')
 		.image-product
 			img(src="/img/1.jpg" alt="" class='lozad w-full h-full object-cover')
 			.icon-favorite(class='transition-all duration-500 group-hover:opacity-100 opacity-0')

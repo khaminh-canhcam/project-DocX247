@@ -75,6 +75,17 @@ export const header = {
     this.initVariable();
     this.megaMenu();
     this.scrollUp();
+    this.changePage();
+  },
+
+  changePage() {
+    const btn = document.querySelector(".popup-topup-btn");
+    if (btn) {
+      btn.addEventListener("click", () => {
+        // 👉 chuyển trang
+        window.location.href = "/finishpay.html";
+      });
+    }
   },
 
   /*==================== Mega Menu ====================*/

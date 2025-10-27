@@ -119,27 +119,40 @@ export const feature = {
     });
   },
 
-customShowmore() {
-  const desc = document.getElementById("desc");
-  const btn = document.getElementById("toggleBtn");
+  customShowmore() {
+    const desc = document.getElementById("desc");
+    const btn = document.getElementById("toggleBtn");
 
-  // 👉 Chỉ chạy nếu cả 2 phần tử tồn tại
-  if (!desc || !btn) return;
+    // 👉 Chỉ chạy nếu cả 2 phần tử tồn tại
+    if (!desc || !btn) return;
 
-  btn.addEventListener("click", () => {
-    const isExpanded = desc.classList.contains("max-h-full");
+    btn.addEventListener("click", () => {
+      const isExpanded = desc.classList.contains("max-h-full");
 
-    if (isExpanded) {
-      desc.classList.remove("max-h-full");
-      desc.classList.add("max-h-screen");
-      btn.textContent = "XEM THÊM";
-    } else {
-      desc.classList.remove("max-h-screen");
-      desc.classList.add("max-h-full");
-      btn.textContent = "THU GỌN";
-    }
-  });
-},
+      if (isExpanded) {
+        desc.classList.remove("max-h-full");
+        desc.classList.add("max-h-screen");
+        btn.textContent = "XEM THÊM";
+      } else {
+        desc.classList.remove("max-h-screen");
+        desc.classList.add("max-h-full");
+        btn.textContent = "THU GỌN";
+      }
+    });
+  },
+
+  customSwiper() {
+    const colnew = document.getElementById("colnew");
+    window.addEventListener("resize", () => {
+      if (window.innerWidth < 1200) {
+        colnew.classList.add("swiper-wrapper");
+        colnew.classList.remove("gridcol");
+      } else {
+        colnew.classList.add("gridcol");
+        colnew.classList.remove("swiper-wrapper");
+      }
+    });
+  },
 
   init() {
     this.introductionActive();
@@ -147,5 +160,6 @@ customShowmore() {
     this.customCheckedPayment();
     this.customPopupTopup();
     this.customShowmore();
+    this.customSwiper();
   },
 };
