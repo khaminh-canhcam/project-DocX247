@@ -48,74 +48,54 @@ export const feature = {
     });
   },
 
-  customCheckedPayment() {
-    const packageItems = document.querySelectorAll(".popup-topup-package-item");
-    const customInput = document.querySelector(".popup-topup-package-input");
-    const paymentItems = document.querySelectorAll(".popup-topup-payment-item");
+  handleSelectPackage() {
+    const packageItems = document.querySelectorAll(".topup-package-item");
+    const otherInput = document.querySelector(".topup-other input");
+    const totalValue = document.querySelector(
+      ".payment-info .value.text-primary"
+    );
 
-    // Click chọn gói nạp
     packageItems.forEach((item) => {
-      const radio = item.querySelector('input[type="radio"]');
       item.addEventListener("click", () => {
-        packageItems.forEach((i) => {
-          i.classList.remove("active");
-          const input = i.querySelector('input[type="radio"]');
-          if (input) input.checked = false;
-        });
+        // Bỏ active cũ
+        packageItems.forEach((i) => i.classList.remove("active"));
         item.classList.add("active");
-        if (radio) radio.checked = true;
-        if (customInput) customInput.value = "";
+
+        // Nếu chọn gói cụ thể → disable input khác
+        otherInput.value = "";
+        // otherInput.disabled = true;
+
+        // Lấy giá trị gói
+        const value = item.querySelector("input").value;
+        totalValue.textContent = `${Number(value).toLocaleString("vi-VN")} VNĐ`;
       });
     });
 
-    // Khi focus vào input nhập tiền khác
-    if (customInput) {
-      customInput.addEventListener("focus", () => {
-        packageItems.forEach((i) => {
-          i.classList.remove("active");
-          const input = i.querySelector('input[type="radio"]');
-          if (input) input.checked = false;
-        });
-      });
-    }
+    // Khi nhập số tiền khác
+    otherInput.addEventListener("input", (e) => {
+      const val = e.target.value;
+      const totalValue = document.querySelector(
+        ".payment-info .value.text-primary"
+      );
+      totalValue.textContent = val
+        ? `${Number(val).toLocaleString("vi-VN")} VNĐ`
+        : "0 VNĐ";
+    });
 
-    // Click chọn phương thức thanh toán
-    paymentItems.forEach((item) => {
-      const radio = item.querySelector('input[type="radio"]');
-      item.addEventListener("click", () => {
-        paymentItems.forEach((i) => {
-          i.classList.remove("active");
-          const input = i.querySelector('input[type="radio"]');
-          if (input) input.checked = false;
-        });
-        item.classList.add("active");
-        if (radio) radio.checked = true;
-      });
+    // Cho phép nhập thủ công khi click input
+    otherInput.addEventListener("focus", () => {
+      packageItems.forEach((i) => i.classList.remove("active"));
+      // otherInput.disabled = false;
     });
   },
 
-  customPopupTopup() {
-    const openBtns = document.querySelectorAll(".btn-open-topup");
-    const popup = document.querySelector(".section-popup-topup");
-    const closeBtn = popup?.querySelector(".popup-topup-close");
-
-    if (!popup || !openBtns.length || !closeBtn) return;
-
-    // mở popup khi click bất kỳ nút nào
-    openBtns.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        popup.classList.remove("hidden");
+  handleSelectMethod() {
+    const methods = document.querySelectorAll(".topup-method");
+    methods.forEach((method) => {
+      method.addEventListener("click", () => {
+        methods.forEach((m) => m.classList.remove("active"));
+        method.classList.add("active");
       });
-    });
-
-    // đóng popup khi click nút close
-    closeBtn.addEventListener("click", () => {
-      popup.classList.add("hidden");
-    });
-
-    // click ra ngoài popup thì đóng
-    popup.addEventListener("click", (e) => {
-      if (e.target === popup) popup.classList.add("hidden");
     });
   },
 
@@ -128,7 +108,7 @@ export const feature = {
 
     btn.addEventListener("click", () => {
       const isExpanded = desc.classList.contains("max-h-full");
-
+      
       if (isExpanded) {
         desc.classList.remove("max-h-full");
         desc.classList.add("max-h-screen");
@@ -154,12 +134,51 @@ export const feature = {
     });
   },
 
+  customNavigationCount() {
+    const prev = document.querySelectorAll(".navigation-prev");
+    const next = document.querySelectorAll(".navigation-next");
+    const pageDisplay = document.querySelectorAll(".page-count");
+    let currentPage = 1;
+
+    if (!prev || !next || !pageDisplay) return;
+
+    next.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        currentPage++;
+        pageDisplay.forEach((el) => (el.textContent = currentPage));
+      });
+    });
+
+    prev.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        if (currentPage > 1) {
+          currentPage--;
+          pageDisplay.forEach((el) => (el.textContent = currentPage));
+        }
+      });
+    });
+  },
+
+  customFaQ() {
+    const items = document.querySelectorAll(".faq-item");
+
+    items.forEach((item) => {
+      const header = item.querySelector(".faq-header");
+      header.addEventListener("click", () => {
+        const isActive = item.classList.contains("active");
+        items.forEach((i) => i.classList.remove("active")); // đóng tất cả
+        if (!isActive) item.classList.add("active"); // mở item hiện tại
+      });
+    });
+  },
   init() {
     this.introductionActive();
     this.customSelect();
-    this.customCheckedPayment();
-    this.customPopupTopup();
+    this.handleSelectMethod();
+    this.handleSelectPackage();
     this.customShowmore();
     this.customSwiper();
+    this.customNavigationCount();
+    this.customFaQ();
   },
 };

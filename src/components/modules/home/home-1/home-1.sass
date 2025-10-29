@@ -1,7 +1,8 @@
 .section-banner
   @apply relative overflow-hidden
   .btn-slide
-    @apply absolute-center-y top-1/2 z-2 text-lg bg-white  text-primary-1 py-2 px-4 rounded-2 cursor-pointer -translate-y-[70%]
+    @apply absolute-center-y top-1/2 z-2 text-lg bg-white  text-primary-1 py-2 px-4 rounded-2
+    @apply cursor-pointer -translate-y-[70%] hover:bg-primary-1 hover:text-white
   .btn-prev
     @apply left-[5%] -translate-x-[30%]
   .btn-next
@@ -14,3 +15,41 @@
       @apply w-full h-full object-cover lg:object-center object-[85%]
 .swiper
   @apply overflow-hidden
+
+.rows-avatar
+  @apply pt-10 pb-6 w-full
+
+.section-recent
+  width: 100%
+  overflow: hidden
+
+  .slider-text
+    --speed: 20s
+    position: relative
+    width: 100%
+    overflow: hidden
+    mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent)
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent)
+    .list
+      overflow: hidden
+      display: inline-flex 
+      white-space: nowrap
+      animation: scrollText var(--speed) linear infinite
+
+    .item
+      @apply font-bold text-h1 text-primary-1/20 uppercase mx-5
+    &[reverse="true"]
+      .list
+        animation: reverseText var(--speed) linear infinite
+
+@keyframes scrollText
+  0%
+    transform: translateX(0)
+  100%
+    transform: translateX(-50%)
+
+@keyframes reverseText
+  0%
+    transform: translateX(-50%)
+  100%
+    transform: translateX(0)

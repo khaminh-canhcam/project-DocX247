@@ -1,0 +1,18 @@
+section.container
+  div(class='text-gray-400 text-base flex items-center gap-2 py-3 divide-x-2 divide-gray-400 ')
+    a(href="") <i class="fa-solid fa-house"></i>
+    a(href="" class='pl-2') something 
+    a(href="" class='pl-2') something
+  div(class='flex flex-col xl:gap-base gap-5 xl:pt-base pt-5')
+    h2(class='capitalize text-h2') tai len
+    form(action="" class='grid grid-cols-2 gap-4')
+      -for(let i = 1 ; i <= 6 ; i++)
+        input(type="text" placeholder='something' class='border border-gray-500 py-3 px-7 rounded-full')
+      textarea(name="" class='col-span-full' placeholder='something' class='border border-gray-500 py-3 px-7 rounded-2')
+      div(class='upload-box col-span-full xl:rem:h-[250px] flex justify-center items-center')
+        input#fileInput(type="file" name="file" accept="image/*, .pdf, .docx, .xlsx")
+        .upload-info
+          i.fa-solid.fa-cloud-arrow-up
+          span Nhấn để chọn hoặc kéo file vào đây
+      .flex.col-span-full.justify-center
+        button(type="submit" class='px-4 py-3 bg-primary-3 rounded-1 text-white text-center capitalize' ) gui di

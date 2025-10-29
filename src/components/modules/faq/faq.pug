@@ -1,0 +1,17 @@
+section.section-faq
+  .container 
+    div(class='text-gray-400 text-base flex items-center gap-3 py-3 divide-x-2 divide-gray-400 col-span-full ')
+      a(href="") <i class="fa-solid fa-house"></i>
+      a(href="" class='pl-2') something 
+    div(class='flex flex-col lg:gap-base gap-5 section-py pt-base')
+      h1.text-h1 Dolor incididunt culpa et aute.
+      ul(id='desc' class='marker-primary-1 list-decimal pl-15 space-y-4 text-base max-h-screen overflow-y-hidden overflow-x-auto transition-all duration-300')
+        -for(let i = 1 ; i <=10 ; i++)
+          each item, i in [{q: 'Phân bón là gì? Tác dụng của những dưỡng chất có trong phân bón?', a: 'Phân bón là những hợp chất... dùng để bổ sung dưỡng chất cho cây trồng...'},{q: 'Tác hại của phân bón đối với môi trường và đất canh tác ở đồng bằng sông Cửu Long?', a: 'Phân bón hóa học nếu dùng quá mức có thể gây ô nhiễm nước, đất...'},{q: 'Để có phân bón tốt, nhà sản xuất cần chú trọng điều kiện gì?', a: 'Cần nguồn nguyên liệu sạch, quy trình sản xuất chuẩn và kiểm soát chất lượng nghiêm ngặt.'}]
+            li.faq-item.border-b.border-gray-200.pb-3.cursor-pointer(data-index=i)
+              .faq-header.flex.justify-between.items-start
+                span.text-gray-800= item.q
+                i.fa-solid.fa-chevron-down.text-gray-500.transition-transform.duration-300
+              .faq-content.hidden.mt-2.text-gray-600= item.a
+      div(class='flex justify-center')
+        button(type="button" id="toggleBtn" class='uppercase text-base  text-white font-semibold p-3 bg-primary-3 rounded-2') xem them 

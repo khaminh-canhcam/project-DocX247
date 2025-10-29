@@ -8,18 +8,18 @@
 .heading-green
   @apply bg-primary-3
 .card-blue
-  @apply border-primary-1
+  @apply border-primary-1 hover:border-primary-1
 .card-orange
-  @apply border-primary-2
+  @apply border-primary-2 hover:border-primary-1
 .card-green
-  @apply border-primary-3
+  @apply border-primary-3 hover:border-primary-1
 .list-product
   @include list-product
 .card-new-item
   @apply xl:col-span-1 md:col-span-2 col-span-3 flex flex-col gap-1
   .card
     @include card-item
-    @apply gap-6 border rounded-3
+    @apply gap-6 border rounded-3 
 .gridcol
   @apply grid grid-cols-6 gap-2
 .favorite.active-favorite i

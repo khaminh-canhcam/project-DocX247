@@ -19,12 +19,12 @@ export function swiperInit() {
     effect: "fade",
     speed: 1000,
     loop:true,
-    // autoplay:{
-    //   delay:3000
-    // },
+    autoplay:{
+      delay:3000
+    },
     pagination: {
       el: ".swiper-pagination",
-      clickable: true,
+      clickable: true
     },
     navigation: {
       prevEl: ".btn-prev",
@@ -44,6 +44,17 @@ export function swiperInit() {
       1200: {
         slidesPerView: 6,
         spaceBetween: 12,
+      },
+    },
+  })
+
+  new Swiper('.swiper-rows-avatar',{
+    slidesPerView: 2,
+    spaceBetween: 14,
+    breakpoints: {
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 28,
       },
     },
   })

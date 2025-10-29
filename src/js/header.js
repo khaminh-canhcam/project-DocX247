@@ -80,6 +80,9 @@ export const header = {
 
   changePage() {
     const btn = document.querySelector(".popup-topup-btn");
+
+  if (!btn || !btnUpload ) return;
+
     if (btn) {
       btn.addEventListener("click", () => {
         // 👉 chuyển trang

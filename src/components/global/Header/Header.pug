@@ -11,12 +11,12 @@ header
           <i class="fa-light fa-magnifying-glass"></i>
       //- Mobile menu overlay
     .right-header
-      button(type="button").pay.btn-open-topup
+      a.btn-open-topup.pay(href="#popup-topup" data-fancybox)
         //- icon
         <i class="fa-light fa-money-simple-from-bracket"></i>
         //- text
         p nạp tiền 
-      a(href="/").upload
+      a(href="/upload.html").upload
         //- icon
         <i class="fa-light fa-upload"></i>
         //- text
@@ -127,49 +127,58 @@ header
       span something@gmail.com
   //- Popup payment
 
-//- Popup nạp tiền (BEM style without underscores)
-.section-popup-topup.hidden
-  .popup-topup
+#popup-topup.hidden(class='popup-topup')
+  .topup-modal
+    h2.title Nạp tiền
+    .topup-body
+      .topup-left
+        .topup-section
+          h3.subtitle Chọn gói nạp
+          .topup-packages
+            label.topup-package-item.active
+              input(type="radio" name="package" value="100000" checked)
+              span 100.000 VNĐ
+            label.topup-package-item
+              input(type="radio" name="package" value="200000")
+              span 200.000 VNĐ
+            label.topup-package-item
+              input(type="radio" name="package" value="300000")
+              span 300.000 VNĐ
+            label.topup-package-item
+              input(type="radio" name="package" value="400000")
+              span 400.000 VNĐ
+            label.topup-package-item
+              input(type="radio" name="package" value="500000")
+              span 500.000 VNĐ
+            label.topup-package-item
+              input(type="radio" name="package" value="1000000")
+              span 1.000.000 VNĐ
 
-    button.popup-topup-close(type="button") ×
+          .topup-other
+            input(type="number" placeholder="Nhập số tiền khác" )
 
-    .popup-topup-left
-      h2.popup-topup-title Nạp tiền
-      .popup-topup-package
-        label.popup-topup-label Chọn gói nạp
-        .popup-topup-package-list
-          each item, index in ['100,000 VNĐ','200,000 VNĐ','300,000 VNĐ','500,000 VNĐ']
-            label.popup-topup-package-item
-              input.popup-topup-package-radio(type="radio" name="amount" value=item checked=(index === 0))
-              span.popup-topup-package-value #{item}
+        .topup-section
+          h3.subtitle Chọn phương thức thanh toán
+          .topup-methods
+            label.topup-method.active
+              input(type="radio" name="method" value="momo" checked)
+              img.icon(src="/img/Momo.png", alt="Momo")
+              span Thanh toán qua ví Momo
+            label.topup-method
+              input(type="radio" name="method" value="vnpay")
+              img.icon(src="/img/vnpay.png", alt="VNPay")
+              span Thanh toán qua ví VNPay
 
-        label.popup-topup-label.mt-4 Nhập số tiền khác
-        input.popup-topup-package-input(type="text" placeholder="Ví dụ: 150,000 VNĐ")
+      .topup-right
+        .payment-info
+          h3.subtitle Thông tin thanh toán
+          ul
+            li
+              span.label Tên dịch vụ
+              span.value Nạp tiền
+            li
+              span.label Thành tiền
+              span.value.text-primary.font-semibold 100.000 VNĐ
+          button.btn-primary Thanh toán
 
-      .popup-topup-payment
-        label.popup-topup-label Chọn phương thức thanh toán
-        .popup-topup-payment-list
-          label.popup-topup-payment-item.active
-            input.popup-topup-payment-radio(type="radio" name="method" value="momo" checked)
-            .popup-topup-payment-info
-              img.popup-topup-payment-icon(src="/img/momo.png" alt="momo")
-              span.popup-topup-payment-name Thanh toán qua MoMo
-          label.popup-topup-payment-item
-            input.popup-topup-payment-radio(type="radio" name="method" value="vnpay")
-            .popup-topup-payment-info
-              img.popup-topup-payment-icon(src="/img/vnpay.png" alt="vnpay")
-              span.popup-topup-payment-name Thanh toán qua VNPAY
 
-    .popup-topup-right
-      .popup-topup-info
-        h3.popup-topup-subtitle Thông tin thanh toán
-        ul.popup-topup-info-list
-          li.popup-topup-info-item
-            span Tên dịch vụ:
-            span Nạp tiền
-          li.popup-topup-info-item
-            span Thành tiền:
-            span 100,000 VNĐ
-      .popup-topup-actions
-        p.popup-topup-note * Số tiền nạp tối thiểu là 10,000 VNĐ
-        button(type="button").popup-topup-btn Thanh toán

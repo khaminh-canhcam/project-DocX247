@@ -1,0 +1,18 @@
+
+    .upload-box
+      @apply relative border border-gray-500 border-dashed rounded-3 py-3 px-base w-full 
+      transition: all 0.3s ease
+      cursor: pointer
+      &:hover
+        border-color: rgba(52, 87, 145, 0.6)
+        background: rgba(52, 87, 145, 0.05)
+      input[type="file"]
+        @apply absolute inset-0 opacity-0 cursor-pointer
+      .upload-info
+        @apply flex flex-col items-center gap-4 text-gray-500
+        span
+          @apply text-base
+      img#preview
+        @apply mt-3 rounded-1 object-cover block
+        max-width: 180px
+        max-height: 180px

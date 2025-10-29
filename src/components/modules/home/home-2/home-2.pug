@@ -1,15 +1,15 @@
-section(class='section-py xl:px-[160px] px-4')
-  div(class=' bg-[#0249D70D] rounded-8 body-18')
+section(class='section-py container-bg')
+  div(class=' bg-primary-1 bg-opacity-[5%] rounded-8 body-18')
     .container.section-py
       .title-section-2
         h1 Tài liệu chọn lọc
         .navigation-docx
           .navigation-prev
             <i class="fa-regular fa-chevron-left"></i>
-          span 1
+          span.page-count 1
           .navigation-next
             <i class="fa-regular fa-chevron-right"></i>
       .list-product 
-        each item in ['pdf','docx','pdf','docx','pdf','docx','pdf','docx','pdf','docx','pdf','docx','pdf','docx','pdf','docx','pdf','docx','pdf','docx','pdf','docx','pdf','docx']
-          +itemProductDocx(item)
-        
+        each item in ['pdf','docx',]
+          -for(let i =1 ;i<16;i++)
+            +itemProductDocx(item)

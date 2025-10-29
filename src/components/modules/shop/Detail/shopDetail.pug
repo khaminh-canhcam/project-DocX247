@@ -8,7 +8,7 @@ section.container
     div(class='lg:col-span-2 col-span-full flex flex-col gap-6')
       //- title name product
       div(class='flex flex-col gap-3 py-base ')
-        h1(class='text-32 line-clamp-1') something Do qui excepteur excepteur aute qui et amet magna Lorem.
+        h1(class='text-32 lg:line-clamp-1 line-clamp-3') something Do qui excepteur excepteur aute qui et amet magna Lorem.
         .view-product
           div
             <i class="fa-light fa-file"></i> 
@@ -50,72 +50,74 @@ section.container
     aside(class=' lg:col-span-1 col-span-full flex flex-col gap-9')
       div(class='img-ratio ratio:pt-[200_440] lg:block hidden')
         +PugImg()
-      div(class='bg-[#0249D7] bg-opacity-[5%] flex flex-col gap-4 lg:p-0 p-4')
+      div(class=' flex flex-col gap-4 lg:p-0 p-4')
         h1 Tài liệu liên quan
         .input-search
           input(type="text" name="" class='search' placeholder="Tìm kiếm tai lieu...")
           button(type="submit") 
             <i class="fa-light fa-magnifying-glass"></i>
-        div(class='grid lg:grid-cols-1 md:grid-cols-2 gap-3 p-3')
+        div(class='grid lg:grid-cols-1 md:grid-cols-2 gap-3 p-3 bg-primary-1 bg-opacity-[5%] rounded-4')
             each item in  ['docx','pdf','docx','pdf','pdf','docx']
               div(class='col-span-1')
                 +newItemProduct(item)
 section.section-document.section-py
   h2.section-title Thông tin tài liệu
-  .document-info
-    .container.space-y-6
-      h3.title Thông tin cơ bản
-      table.info-table
-        tbody
-          tr
-            td.label Tiêu đề
-            td.value Tính toán mạng lưới thoát nước mưa
-          tr
-            td.label Tác giả
-            td.value Phạm Thị Tuyết Nhung
-          tr
-            td.label Người hướng dẫn
-            td.value TS. Trần Thị Mỹ Diệu
-          tr
-            td.label Chuyên ngành
-            td.value Mạng lưới thoát nước
-          tr
-            td.label Thể loại
-            td.value Đồ án
-        tbody 
-          tr 
-            td.label Định dạng
-            td.value
-              img.icon(src="/img/icon-pdf.svg" alt="pdf")
-          tr
-            td.label Số trang
-            td.value 4
-          tr
-            td.label Dung lượng
-            td.value 117,5 KB
-  .document-content
-    .container.space-y-6
-      h3.title Nội dung
-      .content-box
-        p
-          |  Dolore Lorem laborum fugiat cillum laboris sunt. Labore deserunt Lorem consequat sit ad voluptate ullamco. Non reprehenderit sunt eiusmod mollit sint do laborum reprehenderit laborum proident deserunt sint non enim. Non elit est et id cillum officia aliquip.
-          |  Ut laborum proident labore culpa reprehenderit occaecat ad aute ipsum sint veniam. Proident cillum et adipisicing pariatur irure. Sint dolor quis tempor proident.
-          |  Laborum duis ex officia aliquip culpa. Irure et Lorem magna dolor veniam ullamco officia adipisicing elit qui anim mollit ad sint. Fugiat voluptate deserunt laborum laboris adipisicing labore amet sunt duis reprehenderit enim eiusmod voluptate. Anim veniam mollit ipsum ea adipisicing culpa ea. Ullamco do amet aute cillum in occaecat aliqua anim dolor.
-          |  Ea ex excepteur quis et ullamco commodo Lorem occaecat cupidatat veniam dolor duis non aliquip. Sit fugiat quis aute nostrud culpa aliqua duis proident ex pariatur. Velit ad ullamco adipisicing deserunt commodo ex Lorem sint cupidatat sit consectetur laborum laborum nisi. Aute ea amet ad sunt pariatur duis reprehenderit nostrud anim aute. Nulla esse non veniam velit do pariatur velit anim est ipsum aliquip.
-          |  Sit quis incididunt ullamco cupidatat magna nostrud esse incididunt officia sunt consectetur in ut nostrud. Nisi elit duis mollit aliquip veniam occaecat. Exercitation exercitation amet ex occaecat deserunt nulla qui velit est reprehenderit. Eiusmod non ipsum cupidatat quis aliquip esse laborum sint veniam incididunt velit exercitation. Eu magna non deserunt sunt tempor magna qui eiusmod id est ad deserunt.
-          |  Elit occaecat dolor adipisicing labore. Ipsum esse veniam exercitation sint mollit. Exercitation laborum consequat esse occaecat elit magna culpa est do ex laborum occaecat. Consequat amet qui sunt laborum commodo voluptate deserunt Lorem amet. Id nulla deserunt aliquip in nisi.
-          |  Cillum officia pariatur velit Lorem fugiat sit est pariatur. Nulla consequat est incididunt ad nisi ut labore aute. In fugiat sunt ullamco adipisicing cupidatat cupidatat consectetur consequat. Elit velit magna eiusmod consectetur in. Excepteur reprehenderit proident et quis. Commodo aliqua quis voluptate ad.
-          |  Enim est elit minim do dolore dolore amet occaecat cillum ex anim ut do aliqua. Ipsum eu anim velit reprehenderit eu. Minim non exercitation qui voluptate ut. Mollit pariatur qui anim elit magna commodo exercitation labore et. Nostrud ad sit proident cillum non incididunt ut pariatur irure ea adipisicing elit do. Dolor veniam commodo sunt ipsum adipisicing velit ea aute cupidatat laborum. Ullamco non et dolor incididunt labore magna pariatur eiusmod sint sint voluptate exercitation excepteur sint.
-          |  Qui ut id amet eu exercitation aliquip in fugiat tempor voluptate velit elit. Ad veniam excepteur proident proident cillum incididunt irure consectetur ad excepteur dolor ea Lorem culpa. Dolor quis eu incididunt laboris commodo deserunt do exercitation incididunt mollit Lorem consequat irure. Tempor est ut irure ipsum qui laborum adipisicing cupidatat ullamco sint in quis aliquip. Laborum excepteur esse enim ea officia reprehenderit consectetur mollit minim.
-          |  Incididunt do est cupidatat tempor incididunt ea nisi laborum laborum non duis velit fugiat. Duis aliqua ad proident incididunt ullamco enim sunt. Amet tempor aliqua enim deserunt consequat ex labore ullamco irure id labore enim. Ipsum pariatur officia tempor ex amet sunt non ex exercitation.
-          |  Ut laborum proident labore culpa reprehenderit occaecat ad aute ipsum sint veniam. Proident cillum et adipisicing pariatur irure. Sint dolor quis tempor proident.
-          |  Laborum duis ex officia aliquip culpa. Irure et Lorem magna dolor veniam ullamco officia adipisicing elit qui anim mollit ad sint. Fugiat voluptate deserunt laborum laboris adipisicing labore amet sunt duis reprehenderit enim eiusmod voluptate. Anim veniam mollit ipsum ea adipisicing culpa ea. Ullamco do amet aute cillum in occaecat aliqua anim dolor.
-          |  Ea ex excepteur quis et ullamco commodo Lorem occaecat cupidatat veniam dolor duis non aliquip. Sit fugiat quis aute nostrud culpa aliqua duis proident ex pariatur. Velit ad ullamco adipisicing deserunt commodo ex Lorem sint cupidatat sit consectetur laborum laborum nisi. Aute ea amet ad sunt pariatur duis reprehenderit nostrud anim aute. Nulla esse non veniam velit do pariatur velit anim est ipsum aliquip.
-          |  Sit quis incididunt ullamco cupidatat magna nostrud esse incididunt officia sunt consectetur in ut nostrud. Nisi elit duis mollit aliquip veniam occaecat. Exercitation exercitation amet ex occaecat deserunt nulla qui velit est reprehenderit. Eiusmod non ipsum cupidatat quis aliquip esse laborum sint veniam incididunt velit exercitation. Eu magna non deserunt sunt tempor magna qui eiusmod id est ad deserunt.
-          |  Elit occaecat dolor adipisicing labore. Ipsum esse veniam exercitation sint mollit. Exercitation laborum consequat esse occaecat elit magna culpa est do ex laborum occaecat. Consequat amet qui sunt laborum commodo voluptate deserunt Lorem amet. Id nulla deserunt aliquip in nisi.
-          |  Cillum officia pariatur velit Lorem fugiat sit est pariatur. Nulla consequat est incididunt ad nisi ut labore aute. In fugiat sunt ullamco adipisicing cupidatat cupidatat consectetur consequat. Elit velit magna eiusmod consectetur in. Excepteur reprehenderit proident et quis. Commodo aliqua quis voluptate ad.
-          |  Enim est elit minim do dolore dolore amet occaecat cillum ex anim ut do aliqua. Ipsum eu anim velit reprehenderit eu. Minim non exercitation qui voluptate ut. Mollit pariatur qui anim elit magna commodo exercitation labore et. Nostrud ad sit proident cillum non incididunt ut pariatur irure ea adipisicing elit do. Dolor veniam commodo sunt ipsum adipisicing velit ea aute cupidatat laborum. Ullamco non et dolor incididunt labore magna pariatur eiusmod sint sint voluptate exercitation excepteur sint.
-          |  Qui ut id amet eu exercitation aliquip in fugiat tempor voluptate velit elit. Ad veniam excepteur proident proident cillum incididunt irure consectetur ad excepteur dolor ea Lorem culpa. Dolor quis eu incididunt laboris commodo deserunt do exercitation incididunt mollit Lorem consequat irure. Tempor est ut irure ipsum qui laborum adipisicing cupidatat ullamco sint in quis aliquip. Laborum excepteur esse enim ea officia reprehenderit consectetur mollit minim.
-          |  Incididunt do est cupidatat tempor incididunt ea nisi laborum laborum non duis velit fugiat. Duis aliqua ad proident incididunt ullamco enim sunt. Amet tempor aliqua enim deserunt consequat ex labore ullamco irure id labore enim. Ipsum pariatur officia tempor ex amet sunt non ex exercitation.
-      p.date Ngày đăng: 
-        span 25/04/2013, 19:59
+  .container-bg.rounded-6
+    .document-info
+      .container.space-y-6
+        h3.title Thông tin cơ bản
+        table.info-table
+          tbody
+            tr
+              td.label Tiêu đề
+              td.value Tính toán mạng lưới thoát nước mưa
+            tr
+              td.label Tác giả
+              td.value Phạm Thị Tuyết Nhung
+            tr
+              td.label Người hướng dẫn
+              td.value TS. Trần Thị Mỹ Diệu
+            tr
+              td.label Chuyên ngành
+              td.value Mạng lưới thoát nước
+            tr
+              td.label Thể loại
+              td.value Đồ án
+          tbody 
+            tr 
+              td.label Định dạng
+              td.value
+                img.icon(src="/img/icon-pdf.svg" alt="pdf")
+            tr
+              td.label Số trang
+              td.value 4
+            tr
+              td.label Dung lượng
+              td.value 117,5 KB
+  .container-bg.rounded-6
+    .document-content
+      .container.space-y-6
+        h3.title Nội dung
+        .content-box
+          p
+            |  Dolore Lorem laborum fugiat cillum laboris sunt. Labore deserunt Lorem consequat sit ad voluptate ullamco. Non reprehenderit sunt eiusmod mollit sint do laborum reprehenderit laborum proident deserunt sint non enim. Non elit est et id cillum officia aliquip.
+            |  Ut laborum proident labore culpa reprehenderit occaecat ad aute ipsum sint veniam. Proident cillum et adipisicing pariatur irure. Sint dolor quis tempor proident.
+            |  Laborum duis ex officia aliquip culpa. Irure et Lorem magna dolor veniam ullamco officia adipisicing elit qui anim mollit ad sint. Fugiat voluptate deserunt laborum laboris adipisicing labore amet sunt duis reprehenderit enim eiusmod voluptate. Anim veniam mollit ipsum ea adipisicing culpa ea. Ullamco do amet aute cillum in occaecat aliqua anim dolor.
+            |  Ea ex excepteur quis et ullamco commodo Lorem occaecat cupidatat veniam dolor duis non aliquip. Sit fugiat quis aute nostrud culpa aliqua duis proident ex pariatur. Velit ad ullamco adipisicing deserunt commodo ex Lorem sint cupidatat sit consectetur laborum laborum nisi. Aute ea amet ad sunt pariatur duis reprehenderit nostrud anim aute. Nulla esse non veniam velit do pariatur velit anim est ipsum aliquip.
+            |  Sit quis incididunt ullamco cupidatat magna nostrud esse incididunt officia sunt consectetur in ut nostrud. Nisi elit duis mollit aliquip veniam occaecat. Exercitation exercitation amet ex occaecat deserunt nulla qui velit est reprehenderit. Eiusmod non ipsum cupidatat quis aliquip esse laborum sint veniam incididunt velit exercitation. Eu magna non deserunt sunt tempor magna qui eiusmod id est ad deserunt.
+            |  Elit occaecat dolor adipisicing labore. Ipsum esse veniam exercitation sint mollit. Exercitation laborum consequat esse occaecat elit magna culpa est do ex laborum occaecat. Consequat amet qui sunt laborum commodo voluptate deserunt Lorem amet. Id nulla deserunt aliquip in nisi.
+            |  Cillum officia pariatur velit Lorem fugiat sit est pariatur. Nulla consequat est incididunt ad nisi ut labore aute. In fugiat sunt ullamco adipisicing cupidatat cupidatat consectetur consequat. Elit velit magna eiusmod consectetur in. Excepteur reprehenderit proident et quis. Commodo aliqua quis voluptate ad.
+            |  Enim est elit minim do dolore dolore amet occaecat cillum ex anim ut do aliqua. Ipsum eu anim velit reprehenderit eu. Minim non exercitation qui voluptate ut. Mollit pariatur qui anim elit magna commodo exercitation labore et. Nostrud ad sit proident cillum non incididunt ut pariatur irure ea adipisicing elit do. Dolor veniam commodo sunt ipsum adipisicing velit ea aute cupidatat laborum. Ullamco non et dolor incididunt labore magna pariatur eiusmod sint sint voluptate exercitation excepteur sint.
+            |  Qui ut id amet eu exercitation aliquip in fugiat tempor voluptate velit elit. Ad veniam excepteur proident proident cillum incididunt irure consectetur ad excepteur dolor ea Lorem culpa. Dolor quis eu incididunt laboris commodo deserunt do exercitation incididunt mollit Lorem consequat irure. Tempor est ut irure ipsum qui laborum adipisicing cupidatat ullamco sint in quis aliquip. Laborum excepteur esse enim ea officia reprehenderit consectetur mollit minim.
+            |  Incididunt do est cupidatat tempor incididunt ea nisi laborum laborum non duis velit fugiat. Duis aliqua ad proident incididunt ullamco enim sunt. Amet tempor aliqua enim deserunt consequat ex labore ullamco irure id labore enim. Ipsum pariatur officia tempor ex amet sunt non ex exercitation.
+            |  Ut laborum proident labore culpa reprehenderit occaecat ad aute ipsum sint veniam. Proident cillum et adipisicing pariatur irure. Sint dolor quis tempor proident.
+            |  Laborum duis ex officia aliquip culpa. Irure et Lorem magna dolor veniam ullamco officia adipisicing elit qui anim mollit ad sint. Fugiat voluptate deserunt laborum laboris adipisicing labore amet sunt duis reprehenderit enim eiusmod voluptate. Anim veniam mollit ipsum ea adipisicing culpa ea. Ullamco do amet aute cillum in occaecat aliqua anim dolor.
+            |  Ea ex excepteur quis et ullamco commodo Lorem occaecat cupidatat veniam dolor duis non aliquip. Sit fugiat quis aute nostrud culpa aliqua duis proident ex pariatur. Velit ad ullamco adipisicing deserunt commodo ex Lorem sint cupidatat sit consectetur laborum laborum nisi. Aute ea amet ad sunt pariatur duis reprehenderit nostrud anim aute. Nulla esse non veniam velit do pariatur velit anim est ipsum aliquip.
+            |  Sit quis incididunt ullamco cupidatat magna nostrud esse incididunt officia sunt consectetur in ut nostrud. Nisi elit duis mollit aliquip veniam occaecat. Exercitation exercitation amet ex occaecat deserunt nulla qui velit est reprehenderit. Eiusmod non ipsum cupidatat quis aliquip esse laborum sint veniam incididunt velit exercitation. Eu magna non deserunt sunt tempor magna qui eiusmod id est ad deserunt.
+            |  Elit occaecat dolor adipisicing labore. Ipsum esse veniam exercitation sint mollit. Exercitation laborum consequat esse occaecat elit magna culpa est do ex laborum occaecat. Consequat amet qui sunt laborum commodo voluptate deserunt Lorem amet. Id nulla deserunt aliquip in nisi.
+            |  Cillum officia pariatur velit Lorem fugiat sit est pariatur. Nulla consequat est incididunt ad nisi ut labore aute. In fugiat sunt ullamco adipisicing cupidatat cupidatat consectetur consequat. Elit velit magna eiusmod consectetur in. Excepteur reprehenderit proident et quis. Commodo aliqua quis voluptate ad.
+            |  Enim est elit minim do dolore dolore amet occaecat cillum ex anim ut do aliqua. Ipsum eu anim velit reprehenderit eu. Minim non exercitation qui voluptate ut. Mollit pariatur qui anim elit magna commodo exercitation labore et. Nostrud ad sit proident cillum non incididunt ut pariatur irure ea adipisicing elit do. Dolor veniam commodo sunt ipsum adipisicing velit ea aute cupidatat laborum. Ullamco non et dolor incididunt labore magna pariatur eiusmod sint sint voluptate exercitation excepteur sint.
+            |  Qui ut id amet eu exercitation aliquip in fugiat tempor voluptate velit elit. Ad veniam excepteur proident proident cillum incididunt irure consectetur ad excepteur dolor ea Lorem culpa. Dolor quis eu incididunt laboris commodo deserunt do exercitation incididunt mollit Lorem consequat irure. Tempor est ut irure ipsum qui laborum adipisicing cupidatat ullamco sint in quis aliquip. Laborum excepteur esse enim ea officia reprehenderit consectetur mollit minim.
+            |  Incididunt do est cupidatat tempor incididunt ea nisi laborum laborum non duis velit fugiat. Duis aliqua ad proident incididunt ullamco enim sunt. Amet tempor aliqua enim deserunt consequat ex labore ullamco irure id labore enim. Ipsum pariatur officia tempor ex amet sunt non ex exercitation.
+        p.date Ngày đăng: 
+          span 25/04/2013, 19:59
