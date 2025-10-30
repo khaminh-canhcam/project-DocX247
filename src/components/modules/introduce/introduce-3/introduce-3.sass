@@ -2,8 +2,13 @@
   h1
     @apply text-6xl font-bold text-center
 .item-intro-3
-  @apply grid md:grid-cols-2 grid-cols-1 items-center
+  @apply grid md:grid-cols-2 grid-cols-1 items-center gap-base
   &:nth-child(3)
     .intro-img
       @apply lg:order-2
-    
+  .title-content-intro-3
+    @apply px-5
+    h2
+      @apply text-h2
+    li
+      @apply list-inside list-disc

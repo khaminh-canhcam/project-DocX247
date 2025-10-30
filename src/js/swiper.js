@@ -58,4 +58,15 @@ export function swiperInit() {
       },
     },
   })
+
+  new Swiper('.filter-product',{
+    slidesPerView: 2,
+    spaceBetween: 12,
+     breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 12,
+      },
+    },
+  })
 }

@@ -3,9 +3,9 @@ section.introduce
     .big-circle
     .small-circle
     .text-content
-      div
-        <i class="fa-solid fa-house"></i> | Giới thiệu
-      h1
+      include ../../../global/Breadcrumb/Breadcrumb
+      h1.text-h1
         | Cung cấp trải nghiệm số mượt mà
-  div(class='rounded-bl-6 col-span-5 img-ratio ratio:pt-[600_680] md:block hidden')
-    +PugImg()(class='object-cover')
+  div(class='rem:w-[45%] ') 
+    div(class='rounded-bl-10 img-ratio ratio:pt-[580_860] md:block hidden ')
+      +PugImg()(class='object-cover ')

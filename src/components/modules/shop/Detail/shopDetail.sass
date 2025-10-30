@@ -8,6 +8,7 @@
     @apply absolute top-1/2 -translate-y-1/2 right-3
 .card
   @include card-item
+  @apply border border-white hover:border-primary-1 gap-6
   .type-product
     @apply border-0
 .view-product
@@ -22,16 +23,16 @@
   .document-info
     @apply bg-primary-1 bg-opacity-[5%] shadow-sm section-py
     .title
-      @apply font-semibold text-gray-700 
+      @apply font-semibold text-gray-700 text-24
 
     .info-table
-      @apply w-full border-collapse flex md:gap-base gap-0 md:flex-row flex-col
+      @apply w-full border-collapse flex md:gap-base gap-0 md:flex-row flex-col 
 
       tbody
         @apply basis-1/2
 
       td
-        @apply border border-gray-200 px-4 py-2 text-sm text-gray-700
+        @apply border border-gray-200 px-4 py-2 text-gray-700 text-lg
 
       .label
         @apply font-medium bg-gray-50 rem:w-[10%]
@@ -49,9 +50,9 @@
       @apply font-semibold text-gray-700 text-24
 
     .content-box
-      @apply bg-white rounded-xl shadow-inner text-gray-700 leading-relaxed text-sm lg:p-base p-5 
+      @apply bg-white rounded-xl shadow-inner text-gray-700 leading-relaxed text-lg  lg:p-base p-5 
       p
         @apply overflow-y-scroll rem:h-[470px] 
 
     .date
-      @apply text-sm text-gray-500 text-start
+      @apply text-lg text-gray-500 text-start

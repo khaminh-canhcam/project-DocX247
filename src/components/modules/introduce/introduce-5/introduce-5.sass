@@ -2,11 +2,11 @@
   @apply isolate rounded-full relative border border-primary-1
   &::before
     content: ""
-    @apply absolute inset-0.5 border-[2px] border-slate-500/20 z-0 rounded-full shadow-lg
+    @apply absolute inset-1 border-[2px] border-slate-500/20 z-0 rounded-full shadow-lg
   &::after
     content: ""
-    border: 4px solid transparent
-    @apply absolute -inset-0.5 rounded-full z-1 shadow-xl border-t-primary-1
+    border: 8px solid transparent
+    @apply absolute -inset-1 rounded-full z-1 shadow-xl border-t-primary-1
     animation: spin 3s linear infinite
     animation-play-state: paused 
   &:hover::after
@@ -16,7 +16,7 @@
   .policy-item
     &:nth-frist-child
       &::after
-        @apply -rotate-[135deg] transition-transform
+        @apply -rotate-[135deg]
     &:nth-last-child
       &::after
         @apply rotate-[135deg]

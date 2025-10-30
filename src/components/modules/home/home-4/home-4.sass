@@ -4,6 +4,15 @@
     @apply text-[#292929] lg:text-32 text-24 font-bold leading-snug
   .navigation-docx
     @include navigation-btn
+  .navigation-hidden
+    display: none !important
+.navigation-home-4
+  @apply  gap-3 items-center text-base md:hidden flex justify-center pt-base
+  span
+    @apply bg-primary-3 text-white rounded-1 py-3 px-5 cursor-pointer
+  .navigation-prev,
+  .navigation-next
+    @apply bg-white rounded-1 py-3 px-4 cursor-pointer
 .list-product
   @include list-product
   .item-product

@@ -20,7 +20,7 @@ html
 			@apply absolute bottom-2 right-2 py-1 px-2 rounded-1 text-white bg-black/20 text-base
 	.title-product
 		h6
-			@apply text-sm xl:font-semibold line-clamp-2 leading-tight
+			@apply md:text-base text-15px font-semibold line-clamp-2 leading-tight
 	.type-product
 		@apply flex items-center lg:gap-3 gap-10 justify-between
 		@apply border-t border-gray-200 pt-2
@@ -34,7 +34,7 @@ html
 		@apply text-primary-1
 
 @mixin navigation-btn
-	@apply flex gap-3 items-center text-base
+	@apply md:flex gap-3 items-center text-base
 	span
 		@apply bg-primary-3 text-white rounded-1 py-3 px-5 cursor-pointer
 	.navigation-prev,

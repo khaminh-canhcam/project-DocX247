@@ -1,8 +1,5 @@
 section.container
-  div(class='text-gray-400 text-base flex items-center gap-3 lg:py-4 py-5 divide-x-2 divide-gray-400 col-span-full ')
-    a(href="") <i class="fa-solid fa-house"></i>
-    a(href="" class='pl-2') something 
-    a(href="" class='pl-2') something
+  include ../../../global/Breadcrumb/Breadcrumb
   .grid.grid-cols-3.gap-base
     //- content product detail
     div(class='lg:col-span-2 col-span-full flex flex-col gap-6')
@@ -32,7 +29,7 @@ section.container
             h6.text-lg S0w3Th1n9 pas 
         //- btn download 
         button(type="button" class='uppercase text-base  text-white font-semibold p-3 bg-primary-3 rounded-2')
-          <i class="fa-regular fa-download mr-1"></i> tai xuong
+          <i class="fa-regular fa-download mr-1"></i> TẢI XUỐNG
       //- desciption product
       //- content related products
       div(id="desc" class=' flex flex-col gap-3 max-h-screen overflow-hidden transition-all duration-300')
@@ -43,15 +40,15 @@ section.container
         img(src="/img/desc1.png", alt="" class='lozad object-cover')
         img(src="/img/desc1.png", alt="" class='lozad object-cover')
       div.grid.grid-cols-2.gap-4.justify-center
-        button(id="toggleBtn" type='button' class='uppercase text-base  text-white font-semibold p-3 bg-primary-3 rounded-2') xem them 
-        button(type="button" class='uppercase text-base  text-white font-semibold p-3 bg-primary-2 rounded-2')
-          |tai xuong
+        button(id="toggleBtn" type='button' class='uppercase text-base  text-white font-semibold p-3 bg-primary-3 rounded-2') XEM THÊM
+        button(type="button" class='uppercase text-base  text-white font-semibold p-3 bg-primary-4 rounded-2')
+          |TẢI XUỐNG
       p.text-sm.text-gray-500.text-center Non anim deserunt irure voluptate culpa exercitation consequat.
     aside(class=' lg:col-span-1 col-span-full flex flex-col gap-9')
       div(class='img-ratio ratio:pt-[200_440] lg:block hidden')
         +PugImg()
       div(class=' flex flex-col gap-4 lg:p-0 p-4')
-        h1 Tài liệu liên quan
+        h3.text-24 Tài liệu liên quan
         .input-search
           input(type="text" name="" class='search' placeholder="Tìm kiếm tai lieu...")
           button(type="submit") 
@@ -67,7 +64,7 @@ section.section-document.section-py
       .container.space-y-6
         h3.title Thông tin cơ bản
         table.info-table
-          tbody
+          tbody(class='md:block hidden')
             tr
               td.label Tiêu đề
               td.value Tính toán mạng lưới thoát nước mưa
@@ -83,7 +80,33 @@ section.section-document.section-py
             tr
               td.label Thể loại
               td.value Đồ án
-          tbody 
+          tbody(class='md:block hidden') 
+            tr 
+              td.label Định dạng
+              td.value
+                img.icon(src="/img/icon-pdf.svg" alt="pdf")
+            tr
+              td.label Số trang
+              td.value 4
+            tr
+              td.label Dung lượng
+              td.value 117,5 KB
+          tbody(class='md:hidden block')
+            tr
+              td.label Tiêu đề
+              td.value Tính toán mạng lưới thoát nước mưa
+            tr
+              td.label Tác giả
+              td.value Phạm Thị Tuyết Nhung
+            tr
+              td.label Người hướng dẫn
+              td.value TS. Trần Thị Mỹ Diệu
+            tr
+              td.label Chuyên ngành
+              td.value Mạng lưới thoát nước
+            tr
+              td.label Thể loại
+              td.value Đồ án
             tr 
               td.label Định dạng
               td.value

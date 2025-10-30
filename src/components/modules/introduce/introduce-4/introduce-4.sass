@@ -1,31 +1,28 @@
 .section-intro
-  @apply flex gap-4 items-stretch lg:aspect-[16/6] lg:flex-row flex-col
+  @apply flex gap-4 items-stretch lg:aspect-[16/7] lg:flex-row flex-col
   .intro-item
-    @apply flex-1 relative transition-all ease-linear cursor-pointer 
-    @apply flex flex-col items-center justify-center shadow-sm 
+    @apply relative transition-all ease-linear cursor-pointer 
+    @apply flex-1 flex flex-col items-center justify-center shadow-md
     @apply ease-in-out overflow-hidden rounded-6 bg-primary-1/10 duration-500
 
     .intro-header
       @apply text-center transition-all
-      @apply flex flex-col items-center justify-center p-6  
-      h3 
+      @apply flex flex-col items-center justify-center p-6  whitespace-pre-line
+      h4 
         @apply font-semibold text-blue-700 text-sm
 
     .intro-body
-      @apply opacity-0 p-6 w-full hidden flex-col
-      pointer-events: none
+      @apply opacity-0 p-6 w-full hidden flex-col pointer-events-none
 
     &.active
-      @apply flex-[3] bg-white shadow-lg col-span-2 justify-start gap-base
+      @apply flex-[4.4] bg-white
 
       .intro-header
         @apply hidden
 
       .intro-body
-        @apply opacity-100 flex
-        animation: slideInX 0.5s ease-out forwards
-        pointer-events: auto
-
+        @apply opacity-100 flex pointer-events-auto
+        animation: slideInX 0.5s ease-linear forwards 
 @keyframes slideInX
   from
     opacity: 0

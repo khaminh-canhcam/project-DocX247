@@ -6,7 +6,7 @@ section.section-py
         .flex.flex-col.gap-6.py-6
           -for(let i =1 ; i <3 ; i++)
             ul.flex.flex-col.gap-1.text-h4 Website:
-              li.list-disc.list-inside.text-base https://docx247.com
+              li.list-disc.list-inside.text-base.opacity-60 https://docx247.com
         .flex.flex-col.gap-4.pt-6
           h4(class='text-h4 uppercase') theo doi: 
           .social-media
@@ -18,11 +18,11 @@ section.section-py
       .flex.flex-col.gap-4 
         h1(class='text-h1') Laboris elit dolore aliquip magna.
         p Nulla duis consequat incididunt esse cupidatat non Lorem anim culpa. Aute occaecat dolore elit exercitation labore pariatur incididunt sint Lorem cupidatat culpa sint id. 
-      form(action="" class='grid grid-cols-2 gap-4')
-        input(type="text" placeholder='something' class='border border-gray-500 py-3 px-7 rounded-full')
-        input(type="text" placeholder='something' class='border border-gray-500 py-3 px-7 rounded-full')
-        input(type="text" placeholder='something' class='border border-gray-500 py-3 px-7 rounded-full')
-        input(type="text" placeholder='something' class='border border-gray-500 py-3 px-7 rounded-full')
-        textarea(name="" class='col-span-full' placeholder='something' class='border border-gray-500 py-3 px-7 rounded-2 xl:rem:h-[230px]')
+      form(action="" class='grid grid-cols-2 gap-x-4 gap-y-6')
+        input(type="text" placeholder='Họ và tên' class='border border-gray-500 py-3 px-7 rounded-full' required )
+        input(type="text" placeholder='Số điện thoại' class='border border-gray-500 py-3 px-7 rounded-full' required )
+        input(type="email" placeholder='Email' class='border border-gray-500 py-3 px-7 rounded-full' required )
+        input(type="text" placeholder='Tiêu đề' class='border border-gray-500 py-3 px-7 rounded-full')
+        textarea(name="" class='col-span-full' placeholder='Nội dung' class='border border-gray-500 py-3 px-7 rounded-2 xl:rem:h-[230px]' required )
         .flex.col-span-full
-          button(type="submit" class='px-4 py-3 bg-primary-3 rounded-1 text-white text-center capitalize -lg:flex-1' ) gui di
+          button(type="submit" class='px-4 py-3 bg-primary-3 rounded-1 text-white text-center text-lg -lg:flex-1' ) Gửi ngay

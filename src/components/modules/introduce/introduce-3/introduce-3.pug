@@ -5,6 +5,7 @@ section.section-py.container.flex.gap-base.flex-col
     .item-intro-3
       div(class='img-ratio ratio:pt-[380_680] intro-img rounded-6 transition-all')
         +PugImg()(class='w-full h-full object-cover hover:scale-115 transition-all')
-      .title-content.text-start
-        h3 Ea in incididunt laboris reprehenderit proident elit excepteur dolor reprehenderit nulla consectetur eu veniam culpa.
-        p Anim velit esse irure do labore. Ex consequat duis ut officia adipisicing. Consequat culpa amet magna sunt Lorem sint aliquip elit qui labore ex qui deserunt. Enim ex et nostrud velit.
+      .title-content-intro-3.text-start
+        h2 Ea in incididunt laboris reprehenderit proident 
+        -for(let i = 1; i <= 3; i++)
+          li(class='list-disc list-inside') Anim velit esse irure do labore. Ex consequat duis ut officia adipisicing. 
